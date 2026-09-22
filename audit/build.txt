@@ -1,0 +1,9 @@
+CHECKED MoireSection2
+CHECKED MoireSection3
+CHECKED MoireLatticeWords
+CHECKED MoireEisenstein
+CHECKED MoireGeometry
+CHECKED MoireCounting
+CHECKED MoireEndpoint
+CHECKED MoireFibre
+CHECKED MoireConcrete

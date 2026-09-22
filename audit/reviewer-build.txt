@@ -1,0 +1,11 @@
+Independent review build: 2026-09-21T22:14:23.5553396+02:00
+CHECKED MoireSection2
+CHECKED MoireSection3
+CHECKED MoireLatticeWords
+CHECKED MoireEisenstein
+CHECKED MoireGeometry
+CHECKED MoireCounting
+CHECKED MoireEndpoint
+CHECKED MoireFibre
+CHECKED MoireConcrete
+CHECKED ReviewAxioms

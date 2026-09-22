@@ -1,0 +1,27 @@
+import MoireSection2
+import MoireSection3
+import MoireLatticeWords
+import MoireEisenstein
+import MoireGeometry
+import MoireCounting
+import MoireEndpoint
+import MoireFibre
+import MoireConcrete
+
+-- This is a dependency audit, not a replacement for reviewing theorem scope.
+#print axioms MoireSection2.allowedPiThird_zero
+#print axioms MoireSection2.six_two_step_returns
+#print axioms MoireLatticeWords.wordValue_injective
+#print axioms MoireLatticeWords.rotation_mem_ratioClosure_of_finite_liveReachable
+#print axioms MoireEisenstein.complexCoordinates_injective
+#print axioms MoireEisenstein.rotation_mem_eisensteinField_of_finite_live_carries
+#print axioms MoireGeometry.gasket_selfSimilar
+#print axioms MoireGeometry.gasket_intersection_recursion
+#print axioms MoireCounting.distinct_digits_do_not_count_pairs
+#print axioms MoireCounting.piThirdGraphCount_even_ratio
+#print axioms MoireEndpoint.legal_iff_endpoint_mem
+#print axioms MoireFibre.zeroFibre_hausdorffDim
+#print axioms MoireSection3.ae_upper_box_dimension_le
+#print axioms MoireConcrete.finite_type_implies_commensurable
+#print axioms MoireConcrete.gasket_zeroFibre_hausdorffDim
+#print axioms MoireConcrete.manuscript_unlabelled_count_is_false

@@ -1,0 +1,35 @@
+name = "moire_section2"
+version = "0.1.0"
+defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete"]
+
+[[lean_lib]]
+name = "MoireSection2"
+
+[[lean_lib]]
+name = "MoireSection3"
+
+[[lean_lib]]
+name = "MoireLatticeWords"
+
+[[lean_lib]]
+name = "MoireEisenstein"
+
+[[lean_lib]]
+name = "MoireGeometry"
+
+[[lean_lib]]
+name = "MoireCounting"
+
+[[lean_lib]]
+name = "MoireEndpoint"
+
+[[lean_lib]]
+name = "MoireFibre"
+
+[[lean_lib]]
+name = "MoireConcrete"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.32.1"

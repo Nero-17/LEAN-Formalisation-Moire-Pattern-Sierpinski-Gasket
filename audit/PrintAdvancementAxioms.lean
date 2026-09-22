@@ -1,0 +1,9 @@
+import MoireEisenstein
+
+#print axioms MoireLatticeWords.wordValue_injective
+#print axioms MoireLatticeWords.rotation_mem_ratioClosure_of_finite_liveReachable
+#print axioms MoireEisenstein.complexCoordinates_injective
+#print axioms MoireEisenstein.omega_eq_exp_two_pi_third
+#print axioms MoireEisenstein.eisensteinLattice_eq_range
+#print axioms MoireEisenstein.ratioClosure_eq_eisensteinField
+#print axioms MoireEisenstein.rotation_mem_eisensteinField_of_finite_liveReachable

@@ -1,0 +1,11 @@
+'MoireLatticeWords.wordValue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireLatticeWords.rotation_mem_ratioClosure_of_finite_liveReachable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MoireEisenstein.complexCoordinates_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEisenstein.omega_eq_exp_two_pi_third' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEisenstein.eisensteinLattice_eq_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEisenstein.ratioClosure_eq_eisensteinField' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEisenstein.rotation_mem_eisensteinField_of_finite_liveReachable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
