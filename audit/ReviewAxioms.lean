@@ -7,6 +7,7 @@ import MoireCounting
 import MoireEndpoint
 import MoireFibre
 import MoireConcrete
+import MoireSection2Results
 
 -- This is a dependency audit, not a replacement for reviewing theorem scope.
 #print axioms MoireSection2.allowedPiThird_zero
@@ -25,3 +26,13 @@ import MoireConcrete
 #print axioms MoireConcrete.finite_type_implies_commensurable
 #print axioms MoireConcrete.gasket_zeroFibre_hausdorffDim
 #print axioms MoireConcrete.manuscript_unlabelled_count_is_false
+#print axioms MoireAngles.exp_mem_eisensteinField_iff_rational_halfAngle
+#print axioms MoireAngles.exp_mem_eisensteinField_iff_coprime_parametrisation
+#print axioms MoireDimension.isCompact_gasket
+#print axioms MoireDimension.dimH_shiftedIntersection_recursion
+#print axioms MoireFiniteType.field_implies_finite_liveReachable
+#print axioms MoireFiniteType.finite_type_iff_resonant_of_nonempty
+#print axioms MoireDeterminization.gasket_state_recursion
+#print axioms MoireSection2Results.resonant_iff_rotated_lattice_inclusion
+#print axioms MoireSection2Results.resonant_reachable_states_finite
+#print axioms MoireSection2Results.resonant_angles_countable

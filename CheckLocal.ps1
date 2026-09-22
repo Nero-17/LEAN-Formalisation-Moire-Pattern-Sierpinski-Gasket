@@ -3,7 +3,8 @@ param(
     [Parameter(Mandatory=$true)][string]$DependencyRoot,
     [string[]]$Modules = @('MoireSection2', 'MoireSection3', 'MoireLatticeWords',
         'MoireEisenstein', 'MoireGeometry', 'MoireCounting', 'MoireEndpoint',
-        'MoireFibre', 'MoireConcrete')
+        'MoireFibre', 'MoireConcrete', 'MoireAngles', 'MoireDimension',
+        'MoireFiniteType', 'MoireDeterminization', 'MoireSection2Results')
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = $PSScriptRoot
@@ -18,7 +19,9 @@ $env:LEAN_PATH = $libraryPaths -join [IO.Path]::PathSeparator
 Push-Location $projectRoot
 try {
     foreach ($module in $Modules) {
-        & $LeanExecutable -o (Join-Path $outputDirectory "$module.olean") "$module.lean"
+        $moduleOutput = Join-Path $outputDirectory "$module.olean"
+        New-Item -ItemType Directory -Force -Path (Split-Path -Parent $moduleOutput) | Out-Null
+        & $LeanExecutable -o $moduleOutput "$module.lean"
         if ($LASTEXITCODE -ne 0) { throw "Lean rejected $module" }
         Write-Output "CHECKED $module"
     }

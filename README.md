@@ -2,7 +2,7 @@
 
 **This is a partial formalization, not a complete verification of Sections 2
 and 3 or of the paper.** The two principal dimension theorems still lack
-complete formal proofs. The repository contains nine Lean modules, pinned
+complete formal proofs. The repository contains fourteen Lean modules, pinned
 dependencies, build instructions and the historical audit records.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
@@ -34,6 +34,11 @@ and [external-source audit](audit/EVIDENCE.md).
 | `MoireCounting.lean` | Labelled/unlabelled certificates; closed forms and alternating ratios for a specified two-step graph-count recurrence | Recurrence not identified in Lean with actual geometric Q_n(pi/3) |
 | `MoireSection2.lean` | Generic displacement algebra, set recursion, repetition, exact four-carry transition checks | Candidate carries not proved exactly live geometric carries |
 | `MoireSection3.lean` | Generic union bounds and Borel–Cantelli, labelled counting/probability identity, scalar implications and error removal | Lq and box dimensions are scalar parameters; actual analytic theorem not instantiated |
+| `MoireAngles.lean` | Concrete Eisenstein-field, rational half-angle, and coprime integer parametrisation equivalences on [0, pi/3] | No density theorem |
+| `MoireDimension.lean` | Actual gasket norm bound, compactness, corner similarities, and Hausdorff-dimension recursion | No spectral-radius dimension formula |
+| `MoireFiniteType.lean` | Integer denominator clearing, finite bounded lattice sets, resonant forward finiteness, finite-type iff resonant for a nonempty initial intersection | Nonemptiness remains an explicit hypothesis in the iff |
+| `MoireDeterminization.lean` | Live subset states, deterministic blue-labelled transitions, adjacency definition, actual set recursion, and finite reachable graph | Exact pi/3 geometric state enumeration remains open |
+| `MoireSection2Results.lean` | Original rotated-lattice inclusion, finite deterministic graph at resonant angles, countability of resonant angles | Does not assert completion of Section 2 |
 
 `MoireConcrete.finite_type_implies_commensurable` has the paper's structural
 hypotheses: nonempty initial intersection and finitely many actual live
@@ -47,9 +52,9 @@ Retaining ordered digit-pair labels, or multiplicities, repairs this error.
 
 ## Missing mathematics
 
-- Commensurable forward finiteness, exact deterministic graph, open set
-  condition, graph-directed Hausdorff formula, and matching box dimension.
-- Half-angle/rational-field equivalences, countability, and density.
+- Exact geometric pi/3 state enumeration and its spectral-radius calculation;
+  open set condition, graph-directed Hausdorff formula, and matching box dimension.
+- Nonemptiness of the initial intersection for all angles, and density of resonant angles.
 - The filling lemma for rotated gasket difference sets.
 - Actual uniform gasket and difference measures, Lq dimensions, separation
   estimates, directional dichotomy, convolution inequalities, and the
@@ -87,3 +92,6 @@ Clean axiom checks do **not** establish full manuscript coverage.
 
 The fresh upload build and axiom checks are documented in
 [audit/UPLOAD.md](audit/UPLOAD.md), separately from the historical audit.
+
+The subsequent Section 2 additions and their remaining gaps are listed in
+[audit/SECTION2.md](audit/SECTION2.md).

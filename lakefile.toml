@@ -1,6 +1,6 @@
 name = "moire_section2"
 version = "0.1.0"
-defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete"]
+defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete", "MoireAngles", "MoireDimension", "MoireFiniteType", "MoireDeterminization", "MoireSection2Results"]
 
 [[lean_lib]]
 name = "MoireSection2"
@@ -28,6 +28,21 @@ name = "MoireFibre"
 
 [[lean_lib]]
 name = "MoireConcrete"
+
+[[lean_lib]]
+name = "MoireAngles"
+
+[[lean_lib]]
+name = "MoireDimension"
+
+[[lean_lib]]
+name = "MoireFiniteType"
+
+[[lean_lib]]
+name = "MoireDeterminization"
+
+[[lean_lib]]
+name = "MoireSection2Results"
 
 [[require]]
 name = "mathlib"

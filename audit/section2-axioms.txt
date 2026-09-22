@@ -1,0 +1,33 @@
+'MoireSection2.allowedPiThird_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireSection2.six_two_step_returns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireLatticeWords.wordValue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireLatticeWords.rotation_mem_ratioClosure_of_finite_liveReachable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MoireEisenstein.complexCoordinates_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEisenstein.rotation_mem_eisensteinField_of_finite_live_carries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MoireGeometry.gasket_selfSimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireGeometry.gasket_intersection_recursion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireCounting.distinct_digits_do_not_count_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireCounting.piThirdGraphCount_even_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireEndpoint.legal_iff_endpoint_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireFibre.zeroFibre_hausdorffDim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireSection3.ae_upper_box_dimension_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireConcrete.finite_type_implies_commensurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireConcrete.gasket_zeroFibre_hausdorffDim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireConcrete.manuscript_unlabelled_count_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireAngles.exp_mem_eisensteinField_iff_rational_halfAngle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireAngles.exp_mem_eisensteinField_iff_coprime_parametrisation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MoireDimension.isCompact_gasket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireDimension.dimH_shiftedIntersection_recursion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireFiniteType.field_implies_finite_liveReachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireFiniteType.finite_type_iff_resonant_of_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireDeterminization.gasket_state_recursion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireSection2Results.resonant_iff_rotated_lattice_inclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireSection2Results.resonant_reachable_states_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MoireSection2Results.resonant_angles_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+CHECKED audit/ReviewAxioms
