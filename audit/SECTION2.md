@@ -1,38 +1,64 @@
-# Section 2 coverage, 2026-09-23
+# Section 2 coverage — 2026-09-23
 
-This update is not a complete formalisation of Section 2. All new theorems use
-the existing complex address-series gasket and Eisenstein field; no new
-mathematical axioms or theorem-sized dimension hypotheses are introduced.
+Section 2 is formalised for the actual gasket and graph in the English
+manuscript. The main entry point is `MoireSection2Complete.lean`.
+This does not assert completion of Section 3 or the rest of the paper.
 
-| Manuscript item | Checked coverage | Remaining work |
+| Manuscript item | Verified entry point | Remaining Section 2 work |
 | --- | --- | --- |
-| Lemma 2.1 | `MoireGeometry.gasket_intersection_recursion` | None for the stated set recursion |
-| Definition 2.2 | `MoireDeterminization`: finite-set states, live successors, one edge per blue label, adjacency matrix, actual union recursion | None for these definitions |
-| Example 2.3 | `liveReachable_piThird_eq`, `geometric_table`, `reachableState_iff`, `adjacency_eq`, `geometric_matrix_spectral_radius` | None for the live-state table and spectral-radius calculation |
-| Theorem 2.4 | Actual finite graph; compact nonempty state sets; open set condition; similarities; infinite-path coding; spectral weights; finite-product weight bound; an actual path probability measure | Probability cylinder estimates and geometric mass bound; spectral covering growth; Hausdorff and box dimension formula |
-| Example 2.5 | Actual geometric matrix has spectral radius sqrt(6) | Actual dimension conclusion depends on Theorem 2.4 |
-| Proposition 2.6 | Field iff rational half-angle; field iff coprime integer parametrisation; field iff rotated-lattice inclusion | None for the four stated characterisations on [0, pi/3] |
-| Theorem 2.7 | `MoireConcrete.finite_type_implies_commensurable` | None with the theorem's explicit nonempty-intersection hypothesis |
-| Corollary 2.8 | `MoireCharacterisation.finite_type_iff_resonant`, `finite_type_angles_countable`, `closure_finite_type_angles`; initial nonemptiness is proved internally | None for the stated equivalence, countability and density |
+| Lemma 2.1 | `MoireGeometry.gasket_intersection_recursion` | None |
+| Definition 2.2 | `MoireDeterminization`: actual live subset states, deterministic labelled edges and adjacency matrix | None |
+| Example 2.3 | `liveReachable_piThird_eq`, `reachableState_iff`, `geometric_table`, `adjacency_eq`, `piThird_actual_spectral_radius` | None |
+| Theorem 2.4 | `MoireSection2Complete.resonant_dimensions` | None |
+| Example 2.5 | `MoireSection2Complete.piThird_dimensions` | None |
+| Proposition 2.6 | `MoireAngles` and `resonant_iff_rotated_lattice_inclusion` | None |
+| Theorem 2.7 | `MoireConcrete.finite_type_implies_commensurable` | None |
+| Corollary 2.8 | `finite_type_iff_resonant`, `finite_type_angles_countable`, `closure_finite_type_angles` | None |
 
-The lattice inclusion uses a positive integer `q : ℤ`, matching the positive
-integer quantifier in the manuscript. The angle parametrisation uses integer
-`IsCoprime`. The finite-state theorem does not assume a finite state space: it
-derives one from a common integer denominator and the actual gasket norm bound.
+The main theorem assumes exactly an angle in [0, pi/3] and membership of
+exp(i theta) in Q(omega). Resonance supplies a finite state type internally.
+Initial nonemptiness is proved, rather than retained as an additional
+assumption of the main dimension theorem or Corollary 2.8.
 
-`dimH_shiftedIntersection_recursion` is an identity for mathlib's actual
-Hausdorff dimension. It is not a proof of the spectral-radius formula.
+## Proof interfaces
 
-Run `CheckLocal.ps1` with its default module list, followed by
-`-Modules @('audit/ReviewAxioms')` in the same dependency environment.
-See `section2-axioms-2026-09-23.txt` for the current dependency audit.
+- `MoireGraphCovers`, `MoireSpectralGrowth`, `MoireHausdorffUpper`,
+  `MoireActualUpper`: explicit geometric covers, matrix-power counting,
+  spectral growth and actual Hausdorff upper bounds.
+- `MoirePathCylinders`, `MoirePathSupport`, `MoireLabelledMeasure`,
+  `MoireDeterministicPaths`, `MoireGeometricMeasure`: actual cylinder
+  probabilities, almost-sure legal paths, parallel-edge labels, and a
+  probability measure supported on the represented geometric intersection.
+- `MoirePrefixGeometry`, `MoireWordPacking`, `MoireSmallBalls`,
+  `MoireSpectralMass`: exact prefix lattice coordinates, a uniform packing
+  bound, and spectral decay of Euclidean small-ball mass.
+- `MoireMassDistribution`, `MoireHausdorffLower`,
+  `MoireHausdorffEquality`: mass distribution including diameter-zero sets,
+  actual Hausdorff lower bounds and the complete Hausdorff equality.
+- `MoireBoxDimension`, `MoireBoxBounds`, `MoireBoxSimilarity`,
+  `MoireBoxEquality`: upper/lower dyadic covering-growth dimensions,
+  covering estimates, similarity and reachability transfer, and equality.
+- `MoireSection2Complete`: the final resonance theorem, invariant matrix
+  spectral radius under the pi/3 state reindexing, and its dimension example.
 
-`MoirePiThirdTable.geometric_matrix_spectral_radius` explicitly instantiates
-the matrix algebra: it is not the spectrum of pointwise multiplication on
-functions. `stateEquiv` proves that the displayed four-state indexing is a
-bijection with all states reachable in Definition 2.2.
+The box dimensions are defined via genuine Euclidean closed-ball covers:
+upper exponents permit covers with O(2^(n s)) centers; lower exponents require
+all covers to have at least a positive constant times 2^(n s) centers, at
+all sufficiently fine dyadic scales. Their critical exponents are proved
+equal. No dimension is defined using the spectral formula itself.
 
-The new probability measure is a genuine mathlib measure. However, merely
-constructing it does not prove the geometric mass bound or the dimension
-formula. No statement here assumes the graph-directed dimension theorem as
-an axiom or replaces Hausdorff dimension with a symbolic scalar.
+The lower-bound argument does not invoke an unproved graph-directed dimension
+theorem. It uses spectral subeigenweights and a Markov measure, and allows
+reducible graphs. A state carrying a positive spectral weight is reachable
+from the initial state, which transfers both lower bounds to that state.
+
+## Verification
+
+`CheckLocal.ps1` and `lakefile.toml` list all 47 modules in dependency order.
+The final full rebuild is recorded in `section2-full-build-2026-09-23.txt`.
+`ReviewAxioms.lean` includes both final theorems; its output is recorded in
+`section2-axioms-2026-09-23.txt`. Only the standard axioms `propext`,
+`Classical.choice`, and `Quot.sound` are allowed.
+
+Earlier `STATUS.md`, `REVIEW.md`, `EVIDENCE.md` and `UPLOAD.md` reports refer
+to earlier revisions. They should not be read as the current Section 2 status.

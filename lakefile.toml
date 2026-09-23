@@ -1,6 +1,6 @@
 name = "moire_section2"
 version = "0.1.0"
-defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete", "MoireAngles", "MoireDimension", "MoireFiniteType", "MoireDeterminization", "MoireSection2Results", "MoireDensity", "MoireNonempty", "MoireCharacterisation", "MoirePiThirdSpectrum", "MoireTriangle", "MoireTriangleBounds", "MoirePiThirdGeometry", "MoirePiThirdTable", "MoireGraphGeometry", "MoireSpectralWeights", "MoirePathMeasure", "MoireGraphCoding"]
+defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete", "MoireAngles", "MoireDimension", "MoireFiniteType", "MoireDeterminization", "MoireSection2Results", "MoireDensity", "MoireNonempty", "MoireCharacterisation", "MoirePiThirdSpectrum", "MoireTriangle", "MoireTriangleBounds", "MoirePiThirdGeometry", "MoirePiThirdTable", "MoireGraphGeometry", "MoireSpectralWeights", "MoirePathMeasure", "MoireGraphCoding", "MoireGraphCovers", "MoireSpectralGrowth", "MoireHausdorffUpper", "MoireActualUpper", "MoirePathCylinders", "MoirePathSupport", "MoireLabelledMeasure", "MoirePrefixGeometry", "MoireWordPacking", "MoireDeterministicPaths", "MoireSmallBalls", "MoireGeometricMeasure", "MoireSpectralMass", "MoireMassDistribution", "MoireHausdorffLower", "MoireHausdorffEquality", "MoireBoxDimension", "MoireBoxBounds", "MoireBoxSimilarity", "MoireBoxEquality", "MoireSection2Complete"]
 
 [[lean_lib]]
 name = "MoireSection2"
@@ -79,6 +79,69 @@ name = "MoirePathMeasure"
 
 [[lean_lib]]
 name = "MoireGraphCoding"
+
+[[lean_lib]]
+name = "MoireGraphCovers"
+
+[[lean_lib]]
+name = "MoireSpectralGrowth"
+
+[[lean_lib]]
+name = "MoireHausdorffUpper"
+
+[[lean_lib]]
+name = "MoireActualUpper"
+
+[[lean_lib]]
+name = "MoirePathCylinders"
+
+[[lean_lib]]
+name = "MoirePathSupport"
+
+[[lean_lib]]
+name = "MoireLabelledMeasure"
+
+[[lean_lib]]
+name = "MoirePrefixGeometry"
+
+[[lean_lib]]
+name = "MoireWordPacking"
+
+[[lean_lib]]
+name = "MoireDeterministicPaths"
+
+[[lean_lib]]
+name = "MoireSmallBalls"
+
+[[lean_lib]]
+name = "MoireGeometricMeasure"
+
+[[lean_lib]]
+name = "MoireSpectralMass"
+
+[[lean_lib]]
+name = "MoireMassDistribution"
+
+[[lean_lib]]
+name = "MoireHausdorffLower"
+
+[[lean_lib]]
+name = "MoireHausdorffEquality"
+
+[[lean_lib]]
+name = "MoireBoxDimension"
+
+[[lean_lib]]
+name = "MoireBoxBounds"
+
+[[lean_lib]]
+name = "MoireBoxSimilarity"
+
+[[lean_lib]]
+name = "MoireBoxEquality"
+
+[[lean_lib]]
+name = "MoireSection2Complete"
 
 [[require]]
 name = "mathlib"

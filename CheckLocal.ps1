@@ -8,7 +8,8 @@ param(
         'MoireDensity', 'MoireNonempty', 'MoireCharacterisation',
         'MoirePiThirdSpectrum', 'MoireTriangle', 'MoireTriangleBounds',
         'MoirePiThirdGeometry', 'MoirePiThirdTable', 'MoireGraphGeometry',
-        'MoireSpectralWeights', 'MoirePathMeasure', 'MoireGraphCoding')
+        'MoireSpectralWeights', 'MoirePathMeasure', 'MoireGraphCoding',
+        'MoireGraphCovers', 'MoireSpectralGrowth', 'MoireHausdorffUpper', 'MoireActualUpper', 'MoirePathCylinders', 'MoirePathSupport', 'MoireLabelledMeasure', 'MoirePrefixGeometry', 'MoireWordPacking', 'MoireDeterministicPaths', 'MoireSmallBalls', 'MoireGeometricMeasure', 'MoireSpectralMass', 'MoireMassDistribution', 'MoireHausdorffLower', 'MoireHausdorffEquality', 'MoireBoxDimension', 'MoireBoxBounds', 'MoireBoxSimilarity', 'MoireBoxEquality', 'MoireSection2Complete')
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = $PSScriptRoot

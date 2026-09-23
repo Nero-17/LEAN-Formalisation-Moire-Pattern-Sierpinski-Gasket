@@ -1,0 +1,211 @@
+CHECKED MoireSection2
+CHECKED MoireSection3
+CHECKED MoireLatticeWords
+CHECKED MoireEisenstein
+CHECKED MoireGeometry
+CHECKED MoireCounting
+CHECKED MoireEndpoint
+CHECKED MoireFibre
+CHECKED MoireConcrete
+MoireAngles.lean:32:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CHECKED MoireAngles
+CHECKED MoireDimension
+MoireFiniteType.lean:18:69: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+MoireFiniteType.lean:25:2: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CHECKED MoireFiniteType
+CHECKED MoireDeterminization
+CHECKED MoireSection2Results
+CHECKED MoireDensity
+CHECKED MoireNonempty
+CHECKED MoireCharacterisation
+MoirePiThirdSpectrum.lean:44:10: warning: This simp argument is unused:
+  Complex.norm_real
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵_̵r̵e̵a̵l̵,̵ ̵a̵b̵s̵_̵o̵f̵_̵n̵o̵n̵n̵e̵g̵[̲a̲b̲s̲_̲o̲f̲_̲n̲o̲n̲n̲e̲g̲ (Real.sqrt_nonneg 6)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoirePiThirdSpectrum
+CHECKED MoireTriangle
+MoireTriangleBounds.lean:52:17: warning: `ContinuousLinearMap.neg_apply` has been deprecated: Use `neg_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.neg_apply` to `neg_apply x`).
+MoireTriangleBounds.lean:54:13: warning: `ContinuousLinearMap.neg_apply` has been deprecated: Use `neg_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.neg_apply` to `neg_apply x`).
+CHECKED MoireTriangleBounds
+MoirePiThirdGeometry.lean:15:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+MoirePiThirdGeometry.lean:15:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+CHECKED MoirePiThirdGeometry
+MoirePiThirdTable.lean:95:7: warning: Local variable 'initial' resembles constructor 'MoireDeterminization.ReachableState.initial' - write '.initial' (with a dot) or 'MoireDeterminization.ReachableState.initial' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+CHECKED MoirePiThirdTable
+CHECKED MoireGraphGeometry
+MoireSpectralWeights.lean:54:0: warning: automatically included section variable(s) unused in theorem `MoireSpectralWeights.normalized_row_sum`:
+  [DecidableEq State]
+  [Nonempty State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] [Nonempty State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireSpectralWeights
+MoirePathMeasure.lean:25:0: warning: automatically included section variable(s) unused in theorem `MoirePathMeasure.transitionPMF_apply`:
+  [DecidableEq State]
+  [MeasurableSpace State]
+  [MeasurableSingletonClass State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] [MeasurableSpace State] [MeasurableSingletonClass State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MoirePathMeasure.lean:41:7: warning: Variable name `source` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+CHECKED MoirePathMeasure
+MoireGraphCoding.lean:44:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+CHECKED MoireGraphCoding
+MoireGraphCovers.lean:42:0: warning: automatically included section variable(s) unused in theorem `MoireGraphCovers.centers_cover`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireGraphCovers
+MoireSpectralGrowth.lean:31:0: warning: automatically included section variable(s) unused in theorem `MoireSpectralGrowth.row_sum_le_norm`:
+  [Nonempty State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MoireSpectralGrowth.lean:53:0: warning: automatically included section variable(s) unused in theorem `MoireSpectralGrowth.one_le_row_sum_pow`:
+  [Nonempty State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireSpectralGrowth
+MoireHausdorffUpper.lean:111:8: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+CHECKED MoireHausdorffUpper
+MoireActualUpper.lean:16:0: warning: automatically included section variable(s) unused in theorem `MoireActualUpper.outgoing_nonzero`:
+  [DecidableEq (States angle)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq (States angle)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireActualUpper
+MoirePathCylinders.lean:15:0: warning: automatically included section variable(s) unused in theorem `MoirePathCylinders.cylinder_eq_preimage`:
+  [Fintype State]
+  [DecidableEq State]
+  [MeasurableSpace State]
+  [MeasurableSingletonClass State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype State] [DecidableEq State] [MeasurableSpace State] [MeasurableSingletonClass State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MoirePathCylinders.lean:31:0: warning: automatically included section variable(s) unused in theorem `MoirePathCylinders.cylinder_succ_eq_preimage`:
+  [Fintype State]
+  [DecidableEq State]
+  [MeasurableSpace State]
+  [MeasurableSingletonClass State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype State] [DecidableEq State] [MeasurableSpace State] [MeasurableSingletonClass State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MoirePathCylinders.lean:77:0: warning: automatically included section variable(s) unused in theorem `MoirePathCylinders.initial_marginal`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoirePathCylinders
+MoirePathSupport.lean:20:0: warning: automatically included section variable(s) unused in theorem `MoirePathSupport.ae_step`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoirePathSupport
+MoireLabelledMeasure.lean:20:0: warning: automatically included section variable(s) unused in theorem `MoireLabelledMeasure.labelled_row_sum`:
+  [DecidableEq State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireLabelledMeasure
+MoirePrefixGeometry.lean:32:34: warning: This simp argument is unused:
+  Complex.smul_re
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.smul_r̵e̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵s̵m̵u̵l̵_̵im, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MoirePrefixGeometry.lean:32:51: warning: This simp argument is unused:
+  Complex.smul_im
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.smul_re, C̵o̵m̵p̵l̵e̵x̵.̵s̵m̵u̵l̵_̵i̵m̵,̵ ̵smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MoirePrefixGeometry.lean:32:68: warning: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.smul_re, Complex.smul_im,̵ ̵s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoirePrefixGeometry
+CHECKED MoireWordPacking
+MoireDeterministicPaths.lean:38:0: warning: automatically included section variable(s) unused in theorem `MoireDeterministicPaths.blueWord_mass_le`:
+  [Fintype State]
+  [DecidableEq State]
+  [MeasurableSingletonClass State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype State] [DecidableEq State] [MeasurableSingletonClass State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireDeterministicPaths
+MoireSmallBalls.lean:51:23: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+CHECKED MoireSmallBalls
+MoireGeometricMeasure.lean:17:0: warning: automatically included section variable(s) unused in theorem `MoireGeometricMeasure.code_measurable`:
+  [Fintype State]
+  [DecidableEq State]
+  [MeasurableSingletonClass State]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype State] [DecidableEq State] [MeasurableSingletonClass State] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CHECKED MoireGeometricMeasure
+CHECKED MoireSpectralMass
+CHECKED MoireMassDistribution
+CHECKED MoireHausdorffLower
+CHECKED MoireHausdorffEquality
+MoireBoxDimension.lean:35:5: warning: Variable name `first_pos` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+CHECKED MoireBoxDimension
+CHECKED MoireBoxBounds
+CHECKED MoireBoxSimilarity
+CHECKED MoireBoxEquality
+CHECKED MoireSection2Complete

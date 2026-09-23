@@ -14,6 +14,7 @@ import MoireGraphGeometry
 import MoireSpectralWeights
 import MoirePathMeasure
 import MoireGraphCoding
+import MoireSection2Complete
 
 -- This is a dependency audit, not a replacement for reviewing theorem scope.
 #print axioms MoireSection2.allowedPiThird_zero
@@ -60,3 +61,15 @@ import MoireGraphCoding
 #print axioms MoireSpectralWeights.path_probability_bound
 #print axioms MoirePathMeasure.pathMeasure_probability
 #print axioms MoireGraphCoding.addressPoint_mem_of_path
+#print axioms MoireActualUpper.resonant_dimH_initial_le
+#print axioms MoirePathCylinders.cylinder_measure_product
+#print axioms MoirePathSupport.ae_good_paths
+#print axioms MoireGeometricMeasure.ae_code_mem
+#print axioms MoireSpectralMass.geometric_dyadic_ball_mass
+#print axioms MoireMassDistribution.le_dimH_of_dyadic_mass
+#print axioms MoireHausdorffEquality.hausdorff_dimension_eq
+#print axioms MoireBoxDimension.lowerBoxDimension_le_upperBoxDimension
+#print axioms MoireBoxEquality.box_dimensions_eq
+#print axioms MoireSection2Complete.resonant_dimensions
+#print axioms MoireSection2Complete.piThird_actual_spectral_radius
+#print axioms MoireSection2Complete.piThird_dimensions
