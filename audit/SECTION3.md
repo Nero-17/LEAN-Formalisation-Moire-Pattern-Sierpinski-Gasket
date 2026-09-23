@@ -28,6 +28,15 @@ not prove that hypothesis for almost every angle.
 | The resulting small-ball estimate | `eventually_ball_mass_le_exp` |
 | Full Lq dimensions imply the actual upper box bound | `MoireUpperFromLq.upperBox_le_of_full_lq` |
 | Almost-everywhere version, with the same explicit analytic hypothesis | `ae_upperBox_le_of_ae_full_lq` |
+| Minimum nonzero Eisenstein-lattice norm is one | `MoireSeparationGeometry.one_le_norm_lattice` |
+| Determinant controlled by the two directional projections | `determinant_le_projections` |
+| Uniform Lebesgue measure bound for small sine values | `MoireAngularSublevel.sine_sublevel_volume` |
+| Actual angular determinant sublevel bound | `MoireDeterminantSublevel.determinant_sublevel_volume` |
+| Summable bad-scale estimates and almost-everywhere determinant separation | `MoireAlmostEveryProjection.ae_determinant_bound` |
+| Almost-everywhere separation of the nine-map difference system, on all real angles | `MoireSeparationPeriodicity.ae_difference_exponential_separation` |
+| Almost-everywhere projected-factor dichotomy, simultaneously for all unit directions | `MoireSeparationPeriodicity.ae_projection_dichotomy` |
+| Actual gasket Hausdorff dimension is log(3)/log(2) | `MoireGasketDimension.gasket_dimH` |
+| Conditional upper bound in terms of the actual gasket Hausdorff dimension | `MoireSection3GeometricResults.upperBox_le_codimension_of_full_lq` |
 
 The main new implication concludes an upper box bound of log(9)/log(2)-2
 for the actual set `shiftedIntersection gasket (rotation angle) 0`.
@@ -40,17 +49,30 @@ proved unit circumdisk bound for the gasket. This harmless larger radius
 changes the covering constant, not the exponent. Symbolic prefixes are
 counted separately even when geometric cells share boundary points.
 
+The separation proof uses a deliberately less sharp exponential constant
+than the manuscript. There are at most 81^n quadruples of length-n words.
+The determinant bad-event estimate costs at most 9*pi*(81/128)^n in
+Lebesgue measure, which is summable. Almost every angle eventually has
+all nonzero paired cylinder determinants at least (1/512)^n. This gives
+exponential separation with rate 1/4096. Zeros are included in the bad
+events, so a separate directional-resonance exclusion is not needed for
+these two lemmas. Periodicity then gives the statements on all of R.
+
+`MoireSection3GeometricResults.ae_upper_bound_of_analytic_input` combines
+the two proved separation lemmas and the proved geometric dimension
+deduction. Its explicit `analytic` premise is still unproved; the theorem
+must not be described as the unconditional main result.
+
 ## Still required for completion
 
 1. The polygon-filling lemma and the exact support statement.
-2. The two almost-everywhere exponential-separation lemmas, including
-   quantitative angular sublevel estimates and directional resonances.
+2. The separate arithmetic characterisation and countability discussion
+   of directional resonances. Both almost-everywhere separation lemmas
+   themselves, including their angular estimates, are now complete.
 3. The Lq projection/reflection/convolution inequalities and ambient
    dimension bounds used in the argument.
 4. The invoked self-similar Corso–Shmerkin result, and its application to
    prove full Lq dimension of the actual difference measure.
-5. The final identification with twice the actual gasket Hausdorff
-   dimension minus two, rather than just the explicit logarithmic value.
 
 The Bernoulli address construction specifies the intended uniform gasket
 measure; a separate self-similarity identity for that measure is also still
@@ -68,3 +90,9 @@ The seven new modules are listed in both `CheckLocal.ps1` and `lakefile.toml`.
 Their final build is recorded in `section3-build-2026-09-23.txt`; the combined
 Section 2 and Section 3 axiom audit is in `section3-axioms-2026-09-23.txt`.
 Only `propext`, `Classical.choice` and `Quot.sound` are permitted.
+
+The subsequent nine separation/dimension modules are rebuilt in
+`section3-separation-build-2026-09-23.txt`. Their combined axiom audit,
+including the previously verified results, is recorded in
+`section3-separation-axioms-2026-09-23.txt`. The project now contains
+63 modules. Earlier build logs are retained as historical verification.

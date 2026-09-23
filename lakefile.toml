@@ -1,6 +1,6 @@
 name = "moire_section2"
 version = "0.1.0"
-defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete", "MoireAngles", "MoireDimension", "MoireFiniteType", "MoireDeterminization", "MoireSection2Results", "MoireDensity", "MoireNonempty", "MoireCharacterisation", "MoirePiThirdSpectrum", "MoireTriangle", "MoireTriangleBounds", "MoirePiThirdGeometry", "MoirePiThirdTable", "MoireGraphGeometry", "MoireSpectralWeights", "MoirePathMeasure", "MoireGraphCoding", "MoireGraphCovers", "MoireSpectralGrowth", "MoireHausdorffUpper", "MoireActualUpper", "MoirePathCylinders", "MoirePathSupport", "MoireLabelledMeasure", "MoirePrefixGeometry", "MoireWordPacking", "MoireDeterministicPaths", "MoireSmallBalls", "MoireGeometricMeasure", "MoireSpectralMass", "MoireMassDistribution", "MoireHausdorffLower", "MoireHausdorffEquality", "MoireBoxDimension", "MoireBoxBounds", "MoireBoxSimilarity", "MoireBoxEquality", "MoireSection2Complete", "MoireDifferenceMeasure", "MoireDifferenceLaw", "MoireIntersectionCounting", "MoireIntersectionUpper", "MoireDyadicConcentration", "MoireLqDimension", "MoireUpperFromLq"]
+defaultTargets = ["MoireSection2", "MoireSection3", "MoireLatticeWords", "MoireEisenstein", "MoireGeometry", "MoireCounting", "MoireEndpoint", "MoireFibre", "MoireConcrete", "MoireAngles", "MoireDimension", "MoireFiniteType", "MoireDeterminization", "MoireSection2Results", "MoireDensity", "MoireNonempty", "MoireCharacterisation", "MoirePiThirdSpectrum", "MoireTriangle", "MoireTriangleBounds", "MoirePiThirdGeometry", "MoirePiThirdTable", "MoireGraphGeometry", "MoireSpectralWeights", "MoirePathMeasure", "MoireGraphCoding", "MoireGraphCovers", "MoireSpectralGrowth", "MoireHausdorffUpper", "MoireActualUpper", "MoirePathCylinders", "MoirePathSupport", "MoireLabelledMeasure", "MoirePrefixGeometry", "MoireWordPacking", "MoireDeterministicPaths", "MoireSmallBalls", "MoireGeometricMeasure", "MoireSpectralMass", "MoireMassDistribution", "MoireHausdorffLower", "MoireHausdorffEquality", "MoireBoxDimension", "MoireBoxBounds", "MoireBoxSimilarity", "MoireBoxEquality", "MoireSection2Complete", "MoireDifferenceMeasure", "MoireDifferenceLaw", "MoireIntersectionCounting", "MoireIntersectionUpper", "MoireDyadicConcentration", "MoireLqDimension", "MoireUpperFromLq", "MoireSeparationGeometry", "MoireProjectionSeparation", "MoireAngularSublevel", "MoireDeterminantSublevel", "MoireAlmostEveryProjection", "MoireAlmostEverySeparation", "MoireSeparationPeriodicity", "MoireGasketDimension", "MoireSection3GeometricResults"]
 
 [[lean_lib]]
 name = "MoireSection2"
@@ -168,3 +168,30 @@ name = "MoireLqDimension"
 
 [[lean_lib]]
 name = "MoireUpperFromLq"
+
+[[lean_lib]]
+name = "MoireSeparationGeometry"
+
+[[lean_lib]]
+name = "MoireProjectionSeparation"
+
+[[lean_lib]]
+name = "MoireAngularSublevel"
+
+[[lean_lib]]
+name = "MoireDeterminantSublevel"
+
+[[lean_lib]]
+name = "MoireAlmostEveryProjection"
+
+[[lean_lib]]
+name = "MoireAlmostEverySeparation"
+
+[[lean_lib]]
+name = "MoireSeparationPeriodicity"
+
+[[lean_lib]]
+name = "MoireGasketDimension"
+
+[[lean_lib]]
+name = "MoireSection3GeometricResults"

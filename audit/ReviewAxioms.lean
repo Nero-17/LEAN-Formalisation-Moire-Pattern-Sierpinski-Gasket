@@ -1,6 +1,7 @@
 import MoireSection2
 import MoireDifferenceLaw
 import MoireUpperFromLq
+import MoireSection3GeometricResults
 import MoireSection3
 import MoireLatticeWords
 import MoireEisenstein
@@ -88,3 +89,14 @@ import MoireSection2Complete
 #print axioms MoireLqDimension.eventually_ball_mass_le_exp
 #print axioms MoireUpperFromLq.upperBox_le_of_full_lq
 #print axioms MoireUpperFromLq.ae_upperBox_le_of_ae_full_lq
+#print axioms MoireSeparationGeometry.one_le_norm_lattice
+#print axioms MoireSeparationGeometry.determinant_le_projections
+#print axioms MoireAngularSublevel.sine_sublevel_volume
+#print axioms MoireDeterminantSublevel.determinant_sublevel_volume
+#print axioms MoireAlmostEveryProjection.ae_determinant_bound
+#print axioms MoireSeparationPeriodicity.ae_difference_exponential_separation
+#print axioms MoireSeparationPeriodicity.ae_projection_dichotomy
+#print axioms MoireGasketDimension.gasket_dimH
+#print axioms MoireSection3GeometricResults.upperBox_le_codimension_of_full_lq
+#print axioms MoireSection3GeometricResults.ae_both_separation_lemmas
+#print axioms MoireSection3GeometricResults.ae_upper_bound_of_analytic_input

@@ -1,0 +1,26 @@
+CHECKED MoireSeparationGeometry
+MoireProjectionSeparation.lean:60:39: warning: `_root_.not_imp` has been deprecated: Use `Classical.not_imp` instead
+MoireProjectionSeparation.lean:63:39: warning: `_root_.not_imp` has been deprecated: Use `Classical.not_imp` instead
+CHECKED MoireProjectionSeparation
+CHECKED MoireAngularSublevel
+MoireDeterminantSublevel.lean:30:5: warning: Variable name `threshold_nonneg` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+CHECKED MoireDeterminantSublevel
+CHECKED MoireAlmostEveryProjection
+CHECKED MoireAlmostEverySeparation
+MoireSeparationPeriodicity.lean:29:29: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+MoireSeparationPeriodicity.lean:29:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+MoireSeparationPeriodicity.lean:29:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+CHECKED MoireSeparationPeriodicity
+MoireGasketDimension.lean:42:13: warning: `mul_le_mul_right'` has been deprecated: Use `mul_le_mul_left` instead
+CHECKED MoireGasketDimension
+CHECKED MoireSection3GeometricResults
