@@ -9,7 +9,7 @@ param(
         'MoirePiThirdSpectrum', 'MoireTriangle', 'MoireTriangleBounds',
         'MoirePiThirdGeometry', 'MoirePiThirdTable', 'MoireGraphGeometry',
         'MoireSpectralWeights', 'MoirePathMeasure', 'MoireGraphCoding',
-        'MoireGraphCovers', 'MoireSpectralGrowth', 'MoireHausdorffUpper', 'MoireActualUpper', 'MoirePathCylinders', 'MoirePathSupport', 'MoireLabelledMeasure', 'MoirePrefixGeometry', 'MoireWordPacking', 'MoireDeterministicPaths', 'MoireSmallBalls', 'MoireGeometricMeasure', 'MoireSpectralMass', 'MoireMassDistribution', 'MoireHausdorffLower', 'MoireHausdorffEquality', 'MoireBoxDimension', 'MoireBoxBounds', 'MoireBoxSimilarity', 'MoireBoxEquality', 'MoireSection2Complete')
+        'MoireGraphCovers', 'MoireSpectralGrowth', 'MoireHausdorffUpper', 'MoireActualUpper', 'MoirePathCylinders', 'MoirePathSupport', 'MoireLabelledMeasure', 'MoirePrefixGeometry', 'MoireWordPacking', 'MoireDeterministicPaths', 'MoireSmallBalls', 'MoireGeometricMeasure', 'MoireSpectralMass', 'MoireMassDistribution', 'MoireHausdorffLower', 'MoireHausdorffEquality', 'MoireBoxDimension', 'MoireBoxBounds', 'MoireBoxSimilarity', 'MoireBoxEquality', 'MoireSection2Complete', 'MoireDifferenceMeasure', 'MoireDifferenceLaw', 'MoireIntersectionCounting', 'MoireIntersectionUpper', 'MoireDyadicConcentration', 'MoireLqDimension', 'MoireUpperFromLq')
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = $PSScriptRoot

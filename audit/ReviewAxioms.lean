@@ -1,4 +1,6 @@
 import MoireSection2
+import MoireDifferenceLaw
+import MoireUpperFromLq
 import MoireSection3
 import MoireLatticeWords
 import MoireEisenstein
@@ -73,3 +75,16 @@ import MoireSection2Complete
 #print axioms MoireSection2Complete.resonant_dimensions
 #print axioms MoireSection2Complete.piThird_actual_spectral_radius
 #print axioms MoireSection2Complete.piThird_dimensions
+#print axioms MoireDifferenceMeasure.prefix_probability
+#print axioms MoireDifferenceMeasure.prefix_event_probability
+#print axioms MoireDifferenceMeasure.differenceMeasure_eq_product_law
+#print axioms MoireDifferenceLaw.gasketMeasure_gasket
+#print axioms MoireDifferenceLaw.differenceMeasure_eq_convolution
+#print axioms MoireIntersectionCounting.count_le_small_ball
+#print axioms MoireIntersectionCounting.intersectionCenters_cover
+#print axioms MoireDyadicConcentration.sum_cell_mass
+#print axioms MoireDyadicConcentration.small_ball_mass_le_moment
+#print axioms MoireLqDimension.eventually_moment_le_exp
+#print axioms MoireLqDimension.eventually_ball_mass_le_exp
+#print axioms MoireUpperFromLq.upperBox_le_of_full_lq
+#print axioms MoireUpperFromLq.ae_upperBox_le_of_ae_full_lq

@@ -3,7 +3,7 @@
 **Section 2 is formalised. The rest of the paper is not fully formalised.**
 The development uses the actual complex address-series gasket, actual live
 relative-displacement states, and the adjacency matrix of Definition 2.2.
-It contains 47 Lean modules, pinned to Lean and mathlib `v4.32.1`.
+It contains 54 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
 (private).
@@ -49,11 +49,21 @@ for the current dependency audit.
 
 ## Remaining scope outside Section 2
 
-The Section 3 almost-everywhere upper bound remains incomplete. Existing
-files contain generic Borel–Cantelli and counting arguments, but the actual
-difference measure, its Lq-dimension estimates, the relevant analytic
-results and their geometric application are not all formalised. The final
-non-resonant dimension statement remains a conjecture.
+The Section 3 almost-everywhere upper bound remains incomplete. The actual
+uniform address probability measure, its gasket pushforward, and the
+difference convolution are now constructed. Exact symbolic prefix
+probabilities, intersection counts, and Euclidean covers are proved.
+`MoireLqDimension` defines the actual dyadic Lq dimension and proves its
+eventual small-ball consequence. `MoireUpperFromLq.upperBox_le_of_full_lq`
+then proves the actual intersection upper bound, conditional on full Lq
+dimension of the difference measure for every q > 1.
+
+That analytic hypothesis has **not** been discharged. The almost-everywhere
+separation lemmas, projected-convolution estimates, the Corso–Shmerkin
+theorem, and the polygon-filling lemma remain unfinished. See
+[audit/SECTION3.md](audit/SECTION3.md) for the precise boundary. No external
+theorem has been added as an axiom. The final non-resonant dimension
+statement remains a conjecture.
 
 The historical audit files describe manuscript revision `f88d4e4`, including
 false assertions later removed from the English manuscript. They are retained

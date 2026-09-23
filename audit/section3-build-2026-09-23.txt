@@ -1,0 +1,22 @@
+CHECKED MoireSection3
+CHECKED MoireDifferenceMeasure
+CHECKED MoireDifferenceLaw
+CHECKED MoireIntersectionCounting
+CHECKED MoireIntersectionUpper
+MoireDyadicConcentration.lean:114:49: warning: This simp argument is unused:
+  Finset.card_product
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_const, nsmul_eq_mul, F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵p̵r̵o̵d̵u̵c̵t̵,̵ ̵Int.card_Icc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MoireDyadicConcentration.lean:114:70: warning: This simp argument is unused:
+  Int.card_Icc
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_const, nsmul_eq_mul, Finset.card_product,̵ ̵I̵n̵t̵.̵c̵a̵r̵d̵_̵I̵c̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoireDyadicConcentration
+CHECKED MoireLqDimension
+CHECKED MoireUpperFromLq

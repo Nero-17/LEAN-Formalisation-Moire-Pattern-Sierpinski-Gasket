@@ -15,8 +15,10 @@ The theorem of Corso and Shmerkin is represented by the proposition
 arguments. It is not installed as a global Lean axiom. This file checks generic
 rescaling and counting identities, a Borel--Cantelli mechanism, and scalar
 implications corresponding to the dimension argument. The actual gasket
-measures, their Lq dimensions, geometric separation estimates and covering
-comparisons have not been supplied. In particular, the theorem named
+measures, dyadic Lq dimensions and geometric covering deduction are now
+supplied separately in `MoireDifferenceMeasure`, `MoireDifferenceLaw`,
+`MoireLqDimension` and `MoireUpperFromLq`. The analytic full-dimension input
+and separation estimates remain unfinished. In this older file, the theorem named
 `ae_upper_box_dimension_le` is a conditional scalar statement, not a completed
 formal proof of the manuscript's upper bound for gasket intersections.
 -/
