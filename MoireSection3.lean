@@ -18,8 +18,7 @@ implications corresponding to the dimension argument. The actual gasket
 measures, dyadic Lq dimensions and geometric covering deduction are now
 supplied separately in `MoireDifferenceMeasure`, `MoireDifferenceLaw`,
 `MoireLqDimension` and `MoireUpperFromLq`. The two separation lemmas are
-proved in `MoireSeparationPeriodicity`; the analytic full-dimension input
-remains unfinished. In this older file, the theorem named
+proved in `MoireSeparationPeriodicity`. The paper-specific application is now proved in `MoireLqApplication`, relative to explicitly listed general analytic inputs; those inputs still need a literature-backed implementation. In this older file, the theorem named
 `ae_upper_box_dimension_le` is a conditional scalar statement, not a completed
 formal proof of the manuscript's upper bound for gasket intersections.
 -/

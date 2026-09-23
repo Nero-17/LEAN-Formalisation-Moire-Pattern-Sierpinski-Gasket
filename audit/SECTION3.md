@@ -1,6 +1,8 @@
 # Section 3 coverage — 2026-09-23
 
-**Section 3 is not yet completely formalised. Section 2 remains complete.**
+**Updated 2026-09-24: the paper-specific Section 3 argument is proved relative to general analytic inputs. Section 2 remains complete.**
+
+See [SECTION3-APPLICATION.md](SECTION3-APPLICATION.md) for the new results and precise remaining literature interface. The earlier development below is retained as verification history.
 
 The new development proves the geometric conclusion from an explicit
 full-Lq-dimension hypothesis for the actual difference measure. It does
@@ -63,26 +65,14 @@ the two proved separation lemmas and the proved geometric dimension
 deduction. Its explicit `analytic` premise is still unproved; the theorem
 must not be described as the unconditional main result.
 
-## Still required for completion
+## Remaining external inputs (updated 2026-09-24)
 
-1. The polygon-filling lemma and the exact support statement.
-2. The separate arithmetic characterisation and countability discussion
-   of directional resonances. Both almost-everywhere separation lemmas
-   themselves, including their angular estimates, are now complete.
-3. The Lq projection/reflection/convolution inequalities and ambient
-   dimension bounds used in the argument.
-4. The invoked self-similar Corso–Shmerkin result, and its application to
-   prove full Lq dimension of the actual difference measure.
-
-The Bernoulli address construction specifies the intended uniform gasket
-measure; a separate self-similarity identity for that measure is also still
-needed for the self-similar-measure theorem interface.
-
-The external source is [Corso–Shmerkin, Corollary 4.2](https://arxiv.org/html/2409.04608v1#S4.SS2).
-It was checked against the manuscript, but has not been converted into a
-Lean proof or installed as an axiom. The old scalar `CorsoShmerkinInput`
-in `MoireSection3.lean` remains a hypothesis-only interface and is not used
-by the seven new modules.
+The polygon-filling lemma, exact support, directional-resonance arithmetic,
+self-similar measure equations and the paper-specific analytic application
+have now been proved. The earlier `analytic` premise is discharged relative
+to `MoireLqApplication.LiteratureInput`, which contains five general Lq facts.
+The record still needs a documented literature-backed implementation; it is
+not an axiom and has not been inhabited. See SECTION3-APPLICATION.md.
 
 ## Verification
 

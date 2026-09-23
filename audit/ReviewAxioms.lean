@@ -1,3 +1,7 @@
+import MoirePiSixthResonance
+import MoireLqApplication
+import MoireDirectionalArithmetic
+import MoirePolygonFilling
 import MoireSection2
 import MoireDifferenceLaw
 import MoireUpperFromLq
@@ -100,3 +104,32 @@ import MoireSection2Complete
 #print axioms MoireSection3GeometricResults.upperBox_le_codimension_of_full_lq
 #print axioms MoireSection3GeometricResults.ae_both_separation_lemmas
 #print axioms MoireSection3GeometricResults.ae_upper_bound_of_analytic_input
+
+#print axioms MoireBernoulliRecursion.prepend_law
+#print axioms MoireBernoulliRecursion.gasketMeasure_selfSimilar
+#print axioms MoireMeasureSimilarity.differenceMeasure_selfSimilar
+#print axioms MoireHomogeneousSystem.cylinderCenter_vertex
+#print axioms MoireHomogeneousSystem.cylinderCenter_difference
+#print axioms MoireHomogeneousSystem.difference_selfSimilar
+#print axioms MoireHomogeneousSystem.difference_separation
+#print axioms MoireProjectedSystems.projected_separation
+#print axioms MoireProjectedSystems.reflected_separation
+#print axioms MoireProjectedSystems.projected_difference_convolution
+#print axioms MoireLqApplication.projected_difference_full
+#print axioms MoireLqApplication.difference_full
+#print axioms MoireLqApplication.ae_upper_bound
+#print axioms MoireDirectionalResonance.countable_directionallyResonant
+#print axioms MoireDirectionalResonance.ae_not_directionallyResonant
+#print axioms MoireDirectionalArithmetic.directionallyResonant_iff_slope
+#print axioms MoireMeasureSupport.gasketMeasure_support
+#print axioms MoireMeasureSupport.differenceMeasure_support
+#print axioms MoireTriangleBoundary.boundary_subset_gasket
+#print axioms MoirePolygonFilling.boundaries_meet
+#print axioms MoirePolygonFilling.gasket_difference_eq_triangle_difference
+#print axioms MoirePolygonFilling.differenceMeasure_support_polygon
+#print axioms MoirePolygonFilling.support_convex
+#print axioms MoirePolygonFilling.support_contains_zero
+#print axioms MoirePolygonFilling.negative_gasket_difference_eq
+
+#print axioms MoirePiSixthResonance.pi_sixth_directionallyResonant
+#print axioms MoirePiSixthResonance.pi_sixth_not_resonant

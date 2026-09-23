@@ -3,7 +3,7 @@
 **Section 2 is formalised. The rest of the paper is not fully formalised.**
 The development uses the actual complex address-series gasket, actual live
 relative-displacement states, and the adjacency matrix of Definition 2.2.
-It contains 63 Lean modules, pinned to Lean and mathlib `v4.32.1`.
+It contains 76 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
 (private).
@@ -49,28 +49,26 @@ for the current dependency audit.
 
 ## Remaining scope outside Section 2
 
-The Section 3 almost-everywhere upper bound remains incomplete. The actual
-uniform address probability measure, its gasket pushforward, and the
-difference convolution are now constructed. Exact symbolic prefix
-probabilities, intersection counts, and Euclidean covers are proved.
-`MoireLqDimension` defines the actual dyadic Lq dimension and proves its
-eventual small-ball consequence. `MoireUpperFromLq.upperBox_le_of_full_lq`
-then proves the actual intersection upper bound, conditional on full Lq
-dimension of the difference measure for every q > 1.
+Section 3's paper-specific geometry and main-theorem application are now
+proved relative to five explicit general analytic inputs. These include
+the Corso–Shmerkin formula and the ambient-dimension and convolution bounds
+for Lq dimension. They are collected in `MoireLqApplication.LiteratureInput`;
+no field assumes a conclusion about a gasket or a moire intersection.
+The record has not yet been implemented as literature-backed black boxes.
+Thus the main result is still conditional, not an unconditional kernel proof.
 
-Both almost-everywhere separation lemmas are now proved on all real angles
-in `MoireSeparationPeriodicity`, including one full-measure angle set valid
-simultaneously for every projection direction. The proofs include actual
-Lebesgue angular sublevel bounds and a summable finite-word union estimate.
-`MoireGasketDimension.gasket_dimH` proves the Hausdorff dimension of the
-actual gasket; the conditional upper bound now has the actual codimension form.
+The proved development constructs the actual measures and verifies their
+three-map and nine-map self-similar identities, both almost-everywhere
+separation lemmas, their transfer to the projected systems, and the full
+Lq-dimension application. `MoireLqApplication.ae_upper_bound` completes the
+actual intersection upper bound from the general analytic inputs.
 
-The analytic full-Lq hypothesis has **not** been discharged. The
-projected-convolution estimates, the Corso–Shmerkin theorem, and the
-polygon-filling lemma remain unfinished. See
-[audit/SECTION3.md](audit/SECTION3.md) for the precise boundary. No external
-theorem has been added as an axiom. The final non-resonant dimension
-statement remains a conjecture.
+It also proves the polygon-filling lemma, the exact compact convex support,
+the inclusion of zero, and the rational-slope characterisation and countability
+of directional resonances. Pi/6 is proved directionally resonant but not resonant.
+See [audit/SECTION3-APPLICATION.md](audit/SECTION3-APPLICATION.md) for the full
+coverage and exact remaining analytic boundary. All new proofs use only the
+standard Lean axioms. The lower-bound conjecture is unchanged.
 
 The historical audit files describe manuscript revision `f88d4e4`, including
 false assertions later removed from the English manuscript. They are retained

@@ -1,0 +1,68 @@
+CHECKED MoireBernoulliRecursion
+MoireMeasureSimilarity.lean:75:34: warning: This simp argument is unused:
+  Prod.map_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [Function.comp_apply,̵ ̵P̵r̵o̵d̵.̵m̵a̵p̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoireMeasureSimilarity
+MoireHomogeneousSystem.lean:78:2: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CHECKED MoireHomogeneousSystem
+MoireProjectedSystems.lean:71:4: warning: `ContinuousLinearMap.neg_apply` has been deprecated: Use `neg_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.neg_apply` to `neg_apply x`).
+CHECKED MoireProjectedSystems
+MoireLqApplication.lean:113:2: warning: 'norm_num only [show (3 : ℝ) * 3 = 9 by norm_num] at formula' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CHECKED MoireLqApplication
+CHECKED MoireDirectionalResonance
+MoireDirectionalArithmetic.lean:18:8: warning: This simp argument is unused:
+  Complex.normSq_eq_zero
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵z̵e̵r̵o̵,̵ ̵n̵o̵n̵z̵e̵r̵o̵]̵[̲n̲o̲n̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MoireDirectionalArithmetic.lean:88:54: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+MoireDirectionalArithmetic.lean:93:56: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+CHECKED MoireDirectionalArithmetic
+CHECKED MoireMeasureSupport
+MoireTriangleBoundary.lean:17:51: warning: This simp argument is unused:
+  Complex.smul_re
+
+Hint: Omit it from the simp argument list.
+  simp [barycentric, vertex, Complex.smul_r̵e̵,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵s̵m̵u̵l̵_̵im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MoireTriangleBoundary.lean:17:68: warning: This simp argument is unused:
+  Complex.smul_im
+
+Hint: Omit it from the simp argument list.
+  simp [barycentric, vertex, Complex.smul_re,̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵s̵m̵u̵l̵_̵i̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoireTriangleBoundary
+MoireTriangleTopology.lean:32:91: warning: 'done' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+MoireTriangleTopology.lean:99:62: warning: This simp argument is unused:
+  zero
+
+Hint: Omit it from the simp argument list.
+  simp only [triangleLevel, min_le_iff,̵ ̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CHECKED MoireTriangleTopology
+MoireRigidTriangles.lean:46:40: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+CHECKED MoireRigidTriangles
+CHECKED MoirePolygonFilling
