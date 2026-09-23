@@ -8,6 +8,12 @@ import MoireEndpoint
 import MoireFibre
 import MoireConcrete
 import MoireSection2Results
+import MoireCharacterisation
+import MoirePiThirdTable
+import MoireGraphGeometry
+import MoireSpectralWeights
+import MoirePathMeasure
+import MoireGraphCoding
 
 -- This is a dependency audit, not a replacement for reviewing theorem scope.
 #print axioms MoireSection2.allowedPiThird_zero
@@ -36,3 +42,21 @@ import MoireSection2Results
 #print axioms MoireSection2Results.resonant_iff_rotated_lattice_inclusion
 #print axioms MoireSection2Results.resonant_reachable_states_finite
 #print axioms MoireSection2Results.resonant_angles_countable
+#print axioms MoireNonempty.edge_mem_gasket
+#print axioms MoireNonempty.initial_intersection_nonempty
+#print axioms MoireDensity.closure_resonant_angles
+#print axioms MoireCharacterisation.finite_type_iff_resonant
+#print axioms MoireCharacterisation.finite_type_angles_countable
+#print axioms MoireCharacterisation.closure_finite_type_angles
+#print axioms MoirePiThirdGeometry.live_successor_iff
+#print axioms MoirePiThirdGeometry.liveReachable_piThird_eq
+#print axioms MoirePiThirdTable.reachableState_iff
+#print axioms MoirePiThirdTable.geometric_table
+#print axioms MoirePiThirdTable.adjacency_eq
+#print axioms MoirePiThirdTable.geometric_matrix_spectral_radius
+#print axioms MoireGraphGeometry.graph_distinct_edges_disjoint
+#print axioms MoireGraphGeometry.stateIntersection_isCompact
+#print axioms MoireSpectralWeights.exists_nonnegative_spectral_weights
+#print axioms MoireSpectralWeights.path_probability_bound
+#print axioms MoirePathMeasure.pathMeasure_probability
+#print axioms MoireGraphCoding.addressPoint_mem_of_path

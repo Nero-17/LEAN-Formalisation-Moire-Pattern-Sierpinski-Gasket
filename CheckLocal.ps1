@@ -4,7 +4,11 @@ param(
     [string[]]$Modules = @('MoireSection2', 'MoireSection3', 'MoireLatticeWords',
         'MoireEisenstein', 'MoireGeometry', 'MoireCounting', 'MoireEndpoint',
         'MoireFibre', 'MoireConcrete', 'MoireAngles', 'MoireDimension',
-        'MoireFiniteType', 'MoireDeterminization', 'MoireSection2Results')
+        'MoireFiniteType', 'MoireDeterminization', 'MoireSection2Results',
+        'MoireDensity', 'MoireNonempty', 'MoireCharacterisation',
+        'MoirePiThirdSpectrum', 'MoireTriangle', 'MoireTriangleBounds',
+        'MoirePiThirdGeometry', 'MoirePiThirdTable', 'MoireGraphGeometry',
+        'MoireSpectralWeights', 'MoirePathMeasure', 'MoireGraphCoding')
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = $PSScriptRoot

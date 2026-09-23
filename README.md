@@ -2,7 +2,7 @@
 
 **This is a partial formalization, not a complete verification of Sections 2
 and 3 or of the paper.** The two principal dimension theorems still lack
-complete formal proofs. The repository contains fourteen Lean modules, pinned
+complete formal proofs. The repository contains twenty-six Lean modules, pinned
 dependencies, build instructions and the historical audit records.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
@@ -34,11 +34,16 @@ and [external-source audit](audit/EVIDENCE.md).
 | `MoireCounting.lean` | Labelled/unlabelled certificates; closed forms and alternating ratios for a specified two-step graph-count recurrence | Recurrence not identified in Lean with actual geometric Q_n(pi/3) |
 | `MoireSection2.lean` | Generic displacement algebra, set recursion, repetition, exact four-carry transition checks | Candidate carries not proved exactly live geometric carries |
 | `MoireSection3.lean` | Generic union bounds and Borel–Cantelli, labelled counting/probability identity, scalar implications and error removal | Lq and box dimensions are scalar parameters; actual analytic theorem not instantiated |
-| `MoireAngles.lean` | Concrete Eisenstein-field, rational half-angle, and coprime integer parametrisation equivalences on [0, pi/3] | No density theorem |
+| `MoireAngles.lean` | Concrete Eisenstein-field, rational half-angle, and coprime integer parametrisation equivalences on [0, pi/3] | Density is supplied in `MoireDensity` |
 | `MoireDimension.lean` | Actual gasket norm bound, compactness, corner similarities, and Hausdorff-dimension recursion | No spectral-radius dimension formula |
 | `MoireFiniteType.lean` | Integer denominator clearing, finite bounded lattice sets, resonant forward finiteness, finite-type iff resonant for a nonempty initial intersection | Nonemptiness remains an explicit hypothesis in the iff |
-| `MoireDeterminization.lean` | Live subset states, deterministic blue-labelled transitions, adjacency definition, actual set recursion, and finite reachable graph | Exact pi/3 geometric state enumeration remains open |
+| `MoireDeterminization.lean` | Live subset states, deterministic blue-labelled transitions, adjacency definition, actual set recursion, and finite reachable graph | Exact pi/3 enumeration is supplied in `MoirePiThirdTable` |
 | `MoireSection2Results.lean` | Original rotated-lattice inclusion, finite deterministic graph at resonant angles, countability of resonant angles | Does not assert completion of Section 2 |
+| `MoireDensity.lean`, `MoireNonempty.lean`, `MoireCharacterisation.lean` | Density including interval endpoints; triangle edges in the actual gasket; explicit common point at every angle in [0, pi/3]; complete finite-type/resonance equivalence, countability and density | Corollary 2.8 has no unproved nonemptiness premise |
+| `MoireTriangle.lean`, `MoireTriangleBounds.lean`, `MoireGraphGeometry.lean` | Barycentric geometry; actual gasket containment; compact nonempty state sets; open set condition for distinct actual graph edges | No dimension formula follows from these lemmas alone |
+| `MoirePiThirdGeometry.lean`, `MoirePiThirdTable.lean`, `MoirePiThirdSpectrum.lean` | Exact actual live reachable displacements; all four states and all transitions; original adjacency matrix after explicit state reindexing; complex spectrum and spectral radius sqrt(6) | The dimension conclusion still depends on Theorem 2.4 |
+| `MoireSpectralWeights.lean` | Nonnegative weights from a maximal-modulus complex eigenvector; normalized outgoing rows; finite-product path weight bound | Not a Hausdorff measure estimate |
+| `MoirePathMeasure.lean`, `MoireGraphCoding.lean` | Actual countably additive probability measure on infinite state paths; every legal infinite geometric path codes a point of the represented gasket intersection | Probability cylinder bounds, geometric pushforward estimates and dimension conclusions remain to be connected |
 
 `MoireConcrete.finite_type_implies_commensurable` has the paper's structural
 hypotheses: nonempty initial intersection and finitely many actual live
@@ -52,9 +57,9 @@ Retaining ordered digit-pair labels, or multiplicities, repairs this error.
 
 ## Missing mathematics
 
-- Exact geometric pi/3 state enumeration and its spectral-radius calculation;
-  open set condition, graph-directed Hausdorff formula, and matching box dimension.
-- Nonemptiness of the initial intersection for all angles, and density of resonant angles.
+- Theorem 2.4's graph-directed Hausdorff formula and matching box dimension,
+  hence Example 2.5. This needs the probability/cylinder and geometric mass
+  estimates, spectral covering growth and a genuine box-dimension development.
 - The filling lemma for rotated gasket difference sets.
 - Actual uniform gasket and difference measures, Lq dimensions, separation
   estimates, directional dichotomy, convolution inequalities, and the
