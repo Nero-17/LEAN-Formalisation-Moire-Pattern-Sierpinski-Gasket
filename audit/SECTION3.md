@@ -1,3 +1,5 @@
+> **Historical development record. Superseded by [LITERATURE.md](LITERATURE.md): all five inputs are now supplied as cited external axioms, and `MoireSection3Complete.ae_upper_box_dimension` has no remaining analytic parameter. Earlier standard-only audit claims below refer to the pre-integration revision.**
+
 # Section 3 coverage — 2026-09-23
 
 **Updated 2026-09-24: the paper-specific Section 3 argument is proved relative to general analytic inputs. Section 2 remains complete.**

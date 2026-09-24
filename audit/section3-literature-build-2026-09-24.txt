@@ -1,0 +1,10 @@
+CHECKED MoireCompactLaws
+MoireLqApplication.lean:121:2: warning: 'norm_num only [show (3 : ℝ) * 3 = 9 by norm_num] at formula' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CHECKED MoireLqApplication
+MoireLiterature.lean:61:0: warning: Definition `inputs` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+CHECKED MoireLiterature
+CHECKED MoireSection3Complete

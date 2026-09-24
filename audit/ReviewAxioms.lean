@@ -1,3 +1,4 @@
+import MoireSection3Complete
 import MoirePiSixthResonance
 import MoireLqApplication
 import MoireDirectionalArithmetic
@@ -133,3 +134,14 @@ import MoireSection2Complete
 
 #print axioms MoirePiSixthResonance.pi_sixth_directionallyResonant
 #print axioms MoirePiSixthResonance.pi_sixth_not_resonant
+
+#print axioms MoireCompactLaws.map_compact
+#print axioms MoireCompactLaws.mapped_gasket_compact
+#print axioms MoireCompactLaws.difference_compact
+#print axioms MoireCompactLaws.projected_difference_compact
+#print axioms MoireLiterature.inputs
+#print axioms MoireSection3Complete.projected_difference_full
+#print axioms MoireSection3Complete.difference_full
+#print axioms MoireSection3Complete.ae_full_lq_dimension
+#print axioms MoireSection3Complete.ae_upper_box_dimension
+#check MoireSection3Complete.ae_upper_box_dimension

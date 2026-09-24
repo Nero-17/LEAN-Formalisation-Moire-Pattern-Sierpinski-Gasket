@@ -1,9 +1,9 @@
 # Lean formalisation of the Sierpiński-gasket moiré intersection
 
-**Section 2 is formalised. The rest of the paper is not fully formalised.**
+**Sections 2 and 3 are formalised. Section 3 uses five explicitly cited literature axioms; Section 2 uses only standard Lean axioms.**
 The development uses the actual complex address-series gasket, actual live
 relative-displacement states, and the adjacency matrix of Definition 2.2.
-It contains 76 Lean modules, pinned to Lean and mathlib `v4.32.1`.
+It contains 79 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
 (private).
@@ -47,28 +47,29 @@ See [audit/SECTION2.md](audit/SECTION2.md) for the detailed coverage and
 [audit/section2-axioms-2026-09-23.txt](audit/section2-axioms-2026-09-23.txt)
 for the current dependency audit.
 
-## Remaining scope outside Section 2
+## Section 3 and the literature boundary
 
-Section 3's paper-specific geometry and main-theorem application are now
-proved relative to five explicit general analytic inputs. These include
-the Corso–Shmerkin formula and the ambient-dimension and convolution bounds
-for Lq dimension. They are collected in `MoireLqApplication.LiteratureInput`;
-no field assumes a conclusion about a gasket or a moire intersection.
-The record has not yet been implemented as literature-backed black boxes.
-Thus the main result is still conditional, not an unconditional kernel proof.
+`MoireSection3Complete.ae_upper_box_dimension` proves the actual
+almost-everywhere upper box bound with no remaining analytic input parameter.
+`ae_full_lq_dimension` gives full Lq dimension of the actual difference measure
+for almost every angle, simultaneously for every q > 1.
 
-The proved development constructs the actual measures and verifies their
-three-map and nine-map self-similar identities, both almost-everywhere
-separation lemmas, their transfer to the projected systems, and the full
-Lq-dimension application. `MoireLqApplication.ae_upper_bound` completes the
-actual intersection upper bound from the general analytic inputs.
+The paper-specific proofs include the actual self-similar measure identities,
+both separation lemmas and their projected-system applications, the
+polygon-filling lemma and exact support, directional-resonance arithmetic,
+and the covering argument. They contain no custom axioms or proof holes.
 
-It also proves the polygon-filling lemma, the exact compact convex support,
-the inclusion of zero, and the rational-slope characterisation and countability
-of directional resonances. Pi/6 is proved directionally resonant but not resonant.
-See [audit/SECTION3-APPLICATION.md](audit/SECTION3-APPLICATION.md) for the full
-coverage and exact remaining analytic boundary. All new proofs use only the
-standard Lean axioms. The lower-bound conjecture is unchanged.
+The final Section 3 theorem depends on five explicitly named axioms in
+`MoireLiterature.lean`: planar and line ambient bounds, the line convolution
+inequality, and the one-dimensional and planar uniform half-scale instances
+of Corso–Shmerkin. Sources are Corso–Shmerkin (arXiv:2409.04608v1), Section 1.2
+and Corollary 4.2, and Rossi–Shmerkin (arXiv:1812.05660v2), Section 1 and (1.2).
+Compact full-mass sets and real-axis concentration are checked in Lean at
+every application. These external results are trusted, not proved in Lean.
+
+See [audit/LITERATURE.md](audit/LITERATURE.md) for exact source locations,
+representation conventions and the complete trust boundary. The lower-bound
+conjecture remains a conjecture.
 
 The historical audit files describe manuscript revision `f88d4e4`, including
 false assertions later removed from the English manuscript. They are retained
@@ -90,6 +91,4 @@ With prebuilt dependency packages:
 ```
 
 The manifest pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
-Finite certificates use kernel `decide`, not `native_decide`. The final
-theorems' axiom dependencies must be confined to `propext`,
-`Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom axioms.
+Finite certificates use kernel `decide`, not `native_decide`. Section 2 and the paper-specific proofs use only `propext`, `Classical.choice`, and `Quot.sound`. The final Section 3 entry point additionally uses exactly the five cited axioms in `MoireLiterature`. No `sorryAx` is permitted. Run `./audit/CheckAxioms.ps1` after the combined audit to check these per-theorem dependency boundaries.

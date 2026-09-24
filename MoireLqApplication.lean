@@ -1,33 +1,37 @@
+import MoireCompactLaws
 import MoireProjectedSystems
 import MoireSection3GeometricResults
 
 /-! The manuscript's application argument, separated from general analytic inputs.
 `LiteratureInput` is a proposition, not an axiom or an asserted theorem.
 The two formula fields are uniform half-scale specialisations of Corso--Shmerkin,
-arXiv:2409.04608, Corollary 4.2. The remaining fields are general Lq facts whose
-external implementations must be separately documented before closing this interface.
+arXiv:2409.04608, Corollary 4.2. All five fields are supplied by the separately
+documented external axioms in `MoireLiterature`; see `audit/LITERATURE.md`.
 No field states a conclusion about a gasket or a moire intersection. -/
 namespace MoireLqApplication
 
 open MeasureTheory MoireGeometry MoireDifferenceMeasure MoireMeasureSimilarity
 open MoireHomogeneousSystem MoireProjectedSystems MoireLqDimension
 open MoireProjectionSeparation MoireAlmostEverySeparation MoireWordPacking
+open MoireCompactLaws
 open scoped ENNReal
 
 structure LiteratureInput : Prop where
   planar_bound : ∀ (μ : Measure ℂ) [IsProbabilityMeasure μ] (q : ℝ),
-    1 < q → lqDimension μ q ≤ 2
+    1 < q → CompactlySupported μ → lqDimension μ q ≤ 2
   line_bound : ∀ (μ : Measure ℂ) [IsProbabilityMeasure μ] (q : ℝ),
-    1 < q → μ {point : ℂ | point.im = 0} = 1 → lqDimension μ q ≤ 1
+    1 < q → CompactlySupported μ → μ {point : ℂ | point.im = 0} = 1 → lqDimension μ q ≤ 1
   convolution_bound : ∀ (μ ν : Measure ℂ) [IsProbabilityMeasure μ] [IsProbabilityMeasure ν]
-    (q : ℝ), 1 < q → max (lqDimension μ q) (lqDimension ν q) ≤ lqDimension (μ.conv ν) q
+    (q : ℝ), 1 < q → CompactlySupported μ → CompactlySupported ν →
+    μ {point : ℂ | point.im = 0} = 1 → ν {point : ℂ | point.im = 0} = 1 →
+    max (lqDimension μ q) (lqDimension ν q) ≤ lqDimension (μ.conv ν) q
   line_formula : ∀ {α : Type} [Fintype α] (μ : Measure ℂ) [IsProbabilityMeasure μ]
-    (vertices : α → ℂ) (q : ℝ), 0 < Fintype.card α → 1 < q →
+    (vertices : α → ℂ) (q : ℝ), 0 < Fintype.card α → 1 < q → CompactlySupported μ →
     (∀ digit, (vertices digit).im = 0) → μ {point : ℂ | point.im = 0} = 1 →
     UniformSelfSimilar μ vertices → ExponentialSeparation vertices → lqDimension μ q < 1 →
     lqDimension μ q = Real.log (Fintype.card α) / Real.log 2
   planar_formula : ∀ {α : Type} [Fintype α] (μ : Measure ℂ) [IsProbabilityMeasure μ]
-    (vertices : α → ℂ) (q : ℝ), 0 < Fintype.card α → 1 < q →
+    (vertices : α → ℂ) (q : ℝ), 0 < Fintype.card α → 1 < q → CompactlySupported μ →
     UniformSelfSimilar μ vertices → ExponentialSeparation vertices →
     (∀ direction : ℂ, ‖direction‖ = 1 →
       lqDimension μ q - 1 < lqDimension (projectedMeasure direction μ) q) →
@@ -45,12 +49,13 @@ theorem mapped_gasket_full_line (literature : LiteratureInput) (linear : ℂ →
   letI : IsProbabilityMeasure (gasketMeasure.map linear) :=
     Measure.isProbabilityMeasure_map linear.measurable.aemeasurable
   have real_mass := map_real_mass linear real_image
-  have upper := literature.line_bound _ q q_gt_one real_mass
+  have upper := literature.line_bound _ q q_gt_one (mapped_gasket_compact linear) real_mass
   apply le_antisymm upper
   by_contra lower
   have below : lqDimension (gasketMeasure.map linear) q < 1 := lt_of_not_ge lower
   have formula := literature.line_formula (gasketMeasure.map linear)
     (fun digit => linear (vertex digit)) q (by simp) q_gt_one
+    (mapped_gasket_compact linear)
     (fun digit => real_image _) real_mass (mapped_selfSimilar linear) separated below
   simp only [Fintype.card_fin] at formula
   rw [formula] at below
@@ -69,7 +74,7 @@ theorem projected_difference_full (literature : LiteratureInput) (angle : ℝ)
     have preimage : projectionMap direction ⁻¹' {point : ℂ | point.im = 0} = Set.univ := by
       ext point; simp [projectionMap]
     rw [preimage, measure_univ]
-  apply le_antisymm (literature.line_bound _ q q_gt_one real_mass)
+  apply le_antisymm (literature.line_bound _ q q_gt_one (projected_difference_compact angle direction) real_mass)
   letI : IsProbabilityMeasure (gasketMeasure.map (projectionMap direction)) :=
     Measure.isProbabilityMeasure_map (projectionMap direction).measurable.aemeasurable
   letI : IsProbabilityMeasure (gasketMeasure.map (reflectedProjection angle direction)) :=
@@ -78,6 +83,9 @@ theorem projected_difference_full (literature : LiteratureInput) (angle : ℝ)
   have convolution := literature.convolution_bound
     (gasketMeasure.map (projectionMap direction))
     (gasketMeasure.map (reflectedProjection angle direction)) q q_gt_one
+    (mapped_gasket_compact _) (mapped_gasket_compact _)
+    (map_real_mass _ (projection_real direction))
+    (map_real_mass _ (reflected_real angle direction))
   rcases separated with blue | red
   · have full := mapped_gasket_full_line literature (projectionMap direction)
       (projection_real direction) (projected_separation direction blue) q q_gt_one
@@ -92,7 +100,7 @@ theorem difference_full (literature : LiteratureInput) (angle : ℝ)
       ExponentiallySeparated (fun _ word => wordCenter word) direction ∨
       ExponentiallySeparated (fun _ word => rotation angle (wordCenter word)) direction)
     (q : ℝ) (q_gt_one : 1 < q) : lqDimension (differenceMeasure angle) q = 2 := by
-  apply le_antisymm (literature.planar_bound _ q q_gt_one)
+  apply le_antisymm (literature.planar_bound _ q q_gt_one (difference_compact angle))
   by_contra lower
   have below : lqDimension (differenceMeasure angle) q < 2 := lt_of_not_ge lower
   have unsaturated : ∀ direction : ℂ, ‖direction‖ = 1 →
@@ -103,7 +111,7 @@ theorem difference_full (literature : LiteratureInput) (angle : ℝ)
     linarith
   have formula := literature.planar_formula (differenceMeasure angle)
     (fun digit : Fin 3 × Fin 3 => vertex digit.1 - rotation angle (vertex digit.2)) q
-    (by simp) q_gt_one (difference_selfSimilar angle)
+    (by simp) q_gt_one (difference_compact angle) (difference_selfSimilar angle)
     (difference_separation angle separated) unsaturated
   have logarithm : Real.log 9 = 2 * Real.log 3 := by
     calc

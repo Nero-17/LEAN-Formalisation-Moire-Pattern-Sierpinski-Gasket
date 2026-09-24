@@ -35,8 +35,9 @@ theorem ae_both_separation_lemmas : ∀ᵐ angle : ℝ,
     MoireSeparationPeriodicity.ae_projection_dichotomy] with angle separated projected
   exact ⟨separated, projected⟩
 
-/-- This theorem records the exact unfinished analytic bridge. It must not be
-reported as an unconditional formalisation of Section 3's main theorem. -/
+/-- The original conditional bridge, retained as a reusable deduction. Its analytic
+premise is now supplied in `MoireLqApplication`, and the completed entry point is
+`MoireSection3Complete.ae_upper_box_dimension`, with documented literature axioms. -/
 theorem ae_upper_bound_of_analytic_input
     (analytic : ∀ angle : ℝ, DifferenceExponentiallySeparated angle →
       (∀ direction : ℂ, ‖direction‖ = 1 →
