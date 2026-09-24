@@ -6,7 +6,7 @@ namespace MoireSection2Results
 
 open MoireEisenstein MoireGeometry
 
-/-- The geometric lattice inclusion in condition (4) of Proposition 2.6. -/
+/-- The geometric lattice inclusion in condition (4) of Proposition 2.7. -/
 theorem resonant_iff_rotated_lattice_inclusion (angle : ℝ) :
     Complex.exp (angle * Complex.I) ∈ eisensteinField ↔
       ∃ q : ℤ, 0 < q ∧
@@ -32,14 +32,14 @@ theorem resonant_iff_rotated_lattice_inclusion (angle : ℝ) :
     rw [← image_eq, ← mul_assoc, mul_inv_cancel₀ q_ne, one_mul]
     exact image_mem
 
-/-- Definition 2.2 gives a finite deterministic graph at every resonant angle. -/
+/-- Definition 2.3 gives a finite deterministic graph at every resonant angle. -/
 theorem resonant_reachable_states_finite (angle : ℝ)
     (resonant : Complex.exp (angle * Complex.I) ∈ eisensteinField) :
     {state | MoireDeterminization.ReachableState vertex gasket (rotation angle) state}.Finite :=
   MoireDeterminization.reachableStates_finite_of_finite_liveReachable angle
     (MoireFiniteType.resonant_implies_finite_type angle resonant)
 
-/-- The countability part of Corollary 2.8 for the manuscript's angle interval. -/
+/-- The countability part of Corollary 2.9 for the manuscript's angle interval. -/
 theorem resonant_angles_countable :
     {angle : ℝ | 0 ≤ angle ∧ angle ≤ Real.pi / 3 ∧
       Complex.exp (angle * Complex.I) ∈ eisensteinField}.Countable := by

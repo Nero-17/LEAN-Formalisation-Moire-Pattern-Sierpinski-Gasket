@@ -2,25 +2,26 @@
 
 **Sections 2 and 3 are formalised. Section 3 uses five explicitly cited literature axioms; Section 2 uses only standard Lean axioms.**
 The development uses the actual complex address-series gasket, actual live
-relative-displacement states, and the adjacency matrix of Definition 2.2.
+relative-displacement states, and the adjacency matrix of Definition 2.3.
 It contains 79 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
-This public repository contains Lean code, English documentation and verification
-records only. The manuscript and its translations are not distributed here.
+This public repository contains Lean code, numerical data, English documentation and verification
+records. The manuscript and its translations are not distributed here.
 
 ## Section 2 entry points
 
 | Manuscript result | Lean entry point |
 | --- | --- |
 | Lemma 2.1: nine-child intersection recursion | `MoireGeometry.gasket_intersection_recursion` |
-| Definition 2.2: live deterministic subset-state graph | `MoireDeterminization` |
-| Example 2.3: exact four states, transitions, matrix and spectrum at pi/3 | `MoirePiThirdGeometry`, `MoirePiThirdTable`, `MoirePiThirdSpectrum` |
-| Theorem 2.4: Hausdorff and box dimensions at resonant angles | `MoireSection2Complete.resonant_dimensions` |
-| Example 2.5: all three dimensions at pi/3 equal log(6)/log(4) | `MoireSection2Complete.piThird_dimensions` |
-| Proposition 2.6: four equivalent resonance conditions | `MoireAngles`, `MoireSection2Results.resonant_iff_rotated_lattice_inclusion` |
-| Theorem 2.7: finite type implies resonance | `MoireConcrete.finite_type_implies_commensurable` |
-| Corollary 2.8: finite type iff resonance, countability and density | `MoireCharacterisation` |
+| Lemma 2.2: polygon-filling identities | `MoirePolygonFilling.gasket_difference_eq_triangle_difference`, `negative_gasket_difference_eq` |
+| Definition 2.3: live deterministic subset-state graph | `MoireDeterminization` |
+| Example 2.4: exact four states, transitions, matrix and spectrum at pi/3 | `MoirePiThirdGeometry`, `MoirePiThirdTable`, `MoirePiThirdSpectrum` |
+| Theorem 2.5: Hausdorff and box dimensions at resonant angles | `MoireSection2Complete.resonant_dimensions` |
+| Example 2.6: all three dimensions at pi/3 equal log(6)/log(4) | `MoireSection2Complete.piThird_dimensions` |
+| Proposition 2.7: four equivalent resonance conditions | `MoireAngles`, `MoireSection2Results.resonant_iff_rotated_lattice_inclusion` |
+| Theorem 2.8: finite type implies resonance | `MoireConcrete.finite_type_implies_commensurable` |
+| Corollary 2.9: finite type iff resonance, countability and density | `MoireCharacterisation` |
 
 The final theorem constructs the finite state space from the resonance
 hypothesis. It does not assume a graph-directed dimension theorem, a
@@ -73,6 +74,10 @@ representation conventions and the complete trust boundary. The lower-bound
 conjecture remains a conjecture.
 
 Internal manuscript-review reports are excluded from this repository.
+
+## Numerical data
+
+The compact [numerical results file](data/dimension-results.json) contains blue resonant-angle data and red finite-depth estimates, with all non-resonant counts and fit windows. See [data documentation](data/README.md) for provenance and limitations. These values are not claimed to be Lean-certified.
 
 ## Build and trust boundary
 

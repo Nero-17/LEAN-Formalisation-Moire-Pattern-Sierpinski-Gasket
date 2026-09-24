@@ -72,7 +72,7 @@ theorem exists_positive_integer_multiplier (value : ℂ)
   exact eisensteinLattice.mul_mem numerator.property
     (complexCoordinates_mem_eisensteinLattice _)
 
-/-- Conditions (1) and (4) of Proposition 2.6, for any complex multiplier. -/
+/-- Conditions (1) and (4) of Proposition 2.7, for any complex multiplier. -/
 theorem field_iff_lattice_multiplier (value : ℂ) :
     value ∈ eisensteinField ↔
       ∃ q : ℤ, 0 < q ∧ ∀ point ∈ eisensteinLattice,

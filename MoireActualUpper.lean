@@ -27,8 +27,8 @@ theorem outgoing_nonzero (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3)
     exact Finset.card_pos.mpr ⟨digit, Finset.mem_filter.mpr ⟨Finset.mem_univ _, legal⟩⟩
   exact positive.trans (Finset.single_le_sum (fun _ _ => Nat.zero_le _) (Finset.mem_univ target))
 
-/-- The Hausdorff upper inequality of Theorem 2.4, for precisely the actual
-reachable-state matrix of Definition 2.2. -/
+/-- The Hausdorff upper inequality of Theorem 2.5, for precisely the actual
+reachable-state matrix of Definition 2.3. -/
 theorem dimH_initial_le (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3) :
     dimH (shiftedIntersection gasket (rotation angle) 0) ≤ ENNReal.ofReal
       (Real.log ((spectralRadius ℂ (A := Matrix (States angle) (States angle) ℂ)
@@ -56,7 +56,7 @@ theorem dimH_initial_le (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3) :
 end
 
 /-- Resonance supplies finiteness; the upper bound therefore has no extra
-finite-graph hypothesis beyond the assumptions of Theorem 2.4. -/
+finite-graph hypothesis beyond the assumptions of Theorem 2.5. -/
 theorem resonant_dimH_initial_le (angle : ℝ) (nonneg : 0 ≤ angle)
     (upper : angle ≤ Real.pi / 3)
     (resonant : Complex.exp (angle * Complex.I) ∈ MoireEisenstein.eisensteinField) :

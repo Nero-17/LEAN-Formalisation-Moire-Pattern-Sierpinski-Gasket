@@ -7,18 +7,19 @@ This does not assert completion of Section 3 or the rest of the paper.
 | Manuscript item | Verified entry point | Remaining Section 2 work |
 | --- | --- | --- |
 | Lemma 2.1 | `MoireGeometry.gasket_intersection_recursion` | None |
-| Definition 2.2 | `MoireDeterminization`: actual live subset states, deterministic labelled edges and adjacency matrix | None |
-| Example 2.3 | `liveReachable_piThird_eq`, `reachableState_iff`, `geometric_table`, `adjacency_eq`, `piThird_actual_spectral_radius` | None |
-| Theorem 2.4 | `MoireSection2Complete.resonant_dimensions` | None |
-| Example 2.5 | `MoireSection2Complete.piThird_dimensions` | None |
-| Proposition 2.6 | `MoireAngles` and `resonant_iff_rotated_lattice_inclusion` | None |
-| Theorem 2.7 | `MoireConcrete.finite_type_implies_commensurable` | None |
-| Corollary 2.8 | `finite_type_iff_resonant`, `finite_type_angles_countable`, `closure_finite_type_angles` | None |
+| Lemma 2.2 | `MoirePolygonFilling.gasket_difference_eq_triangle_difference`, `negative_gasket_difference_eq` | None |
+| Definition 2.3 | `MoireDeterminization`: actual live subset states, deterministic labelled edges and adjacency matrix | None |
+| Example 2.4 | `liveReachable_piThird_eq`, `reachableState_iff`, `geometric_table`, `adjacency_eq`, `piThird_actual_spectral_radius` | None |
+| Theorem 2.5 | `MoireSection2Complete.resonant_dimensions` | None |
+| Example 2.6 | `MoireSection2Complete.piThird_dimensions` | None |
+| Proposition 2.7 | `MoireAngles` and `resonant_iff_rotated_lattice_inclusion` | None |
+| Theorem 2.8 | `MoireConcrete.finite_type_implies_commensurable` | None |
+| Corollary 2.9 | `finite_type_iff_resonant`, `finite_type_angles_countable`, `closure_finite_type_angles` | None |
 
 The main theorem assumes exactly an angle in [0, pi/3] and membership of
 exp(i theta) in Q(omega). Resonance supplies a finite state type internally.
 Initial nonemptiness is proved, rather than retained as an additional
-assumption of the main dimension theorem or Corollary 2.8.
+assumption of the main dimension theorem or Corollary 2.9.
 
 ## Proof interfaces
 

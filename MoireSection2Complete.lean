@@ -7,7 +7,7 @@ namespace MoireSection2Complete
 open MoireGeometry MoireSection2 MoireDeterminization MoireActualUpper MoireBoxDimension
 open scoped ENNReal Matrix.Norms.Operator
 
-/-- Theorem 2.4: resonance yields the actual Hausdorff and both box dimensions.
+/-- Theorem 2.5: resonance yields the actual Hausdorff and both box dimensions.
 Finiteness is constructed from resonance, and no dimension formula is assumed. -/
 theorem resonant_dimensions (angle : ℝ) (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3)
     (resonant : Complex.exp (angle * Complex.I) ∈ MoireEisenstein.eisensteinField) :
@@ -45,7 +45,7 @@ theorem piThird_actual_spectral_radius [Fintype (States (Real.pi / 3))]
   rw [← radius_eq]
   exact MoirePiThirdTable.geometric_matrix_spectral_radius
 
-/-- Example 2.5 is a consequence of the actual dimension theorem and the
+/-- Example 2.6 is a consequence of the actual dimension theorem and the
 verified four-state matrix, not merely a simplification of a proposed formula. -/
 theorem piThird_dimensions :
     dimH (shiftedIntersection gasket (rotation (Real.pi / 3)) 0) =

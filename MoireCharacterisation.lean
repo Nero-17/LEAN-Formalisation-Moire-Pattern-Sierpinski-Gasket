@@ -5,7 +5,7 @@ namespace MoireCharacterisation
 
 open MoireGeometry MoireEisenstein MoireLatticeWords
 
-/-- Corollary 2.8's equivalence, with initial nonemptiness now proved internally. -/
+/-- Corollary 2.9's equivalence, with initial nonemptiness now proved internally. -/
 theorem finite_type_iff_resonant (angle : ℝ)
     (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3) :
     (liveReachable eisensteinLattice latticeCoordinates

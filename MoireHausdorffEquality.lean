@@ -22,7 +22,7 @@ theorem reachable_dimH_le_initial (angle : ℝ) (state : Finset ℂ)
 
 variable (angle : ℝ) [Fintype (States angle)] [DecidableEq (States angle)]
 
-/-- The actual Hausdorff-dimension equality in Theorem 2.4. -/
+/-- The actual Hausdorff-dimension equality in Theorem 2.5. -/
 theorem hausdorff_dimension_eq (nonneg : 0 ≤ angle) (upper : angle ≤ Real.pi / 3) :
     dimH (shiftedIntersection gasket (rotation angle) 0) = ENNReal.ofReal
       (Real.log ((spectralRadius ℂ (A := Matrix (States angle) (States angle) ℂ)

@@ -3,7 +3,7 @@ import Mathlib.Data.Finset.Powerset
 import Mathlib.Data.Matrix.Basic
 
 /-!
-# The live subset construction of Definition 2.2
+# The live subset construction of Definition 2.3
 
 States are finite sets of relative displacements.  Each blue label has one
 target, obtained by collecting all red successors and keeping exactly the live
@@ -25,7 +25,7 @@ def stateIntersection (gasket : Set V) (rotate : Module.End ℚ V)
   {point | ∃ displacement ∈ state,
     point ∈ shiftedIntersection gasket rotate displacement}
 
-/-- Exactly the live-filtered target set in Definition 2.2. -/
+/-- Exactly the live-filtered target set in Definition 2.3. -/
 def successorState (vertex : ι → V) (gasket : Set V) (rotate : Module.End ℚ V)
     (state : Finset V) (blueDigit : ι) : Finset V := by
   classical
@@ -189,7 +189,7 @@ theorem reachableStates_finite (vertex : ι → V) (gasket : Set V)
   exact Finset.mem_powerset.mpr
     (reachableState_subset_pool vertex gasket rotate pool zero_mem closed_live reachable)
 
-/-- Definition 2.2's initial state represents exactly the actual rotated gasket
+/-- Definition 2.3's initial state represents exactly the actual rotated gasket
 intersection at coincident centres. -/
 theorem initialState_intersection (angle : ℝ) :
     stateIntersection MoireGeometry.gasket (MoireGeometry.rotation angle) {0} =

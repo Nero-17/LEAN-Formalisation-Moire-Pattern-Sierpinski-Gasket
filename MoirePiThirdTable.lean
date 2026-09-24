@@ -128,7 +128,7 @@ noncomputable def stateEquiv : Fin 4 ≃
         obtain ⟨index, equality⟩ := (reachableState_iff state.val).mp state.property
         exact ⟨index, Subtype.ext equality.symm⟩⟩
 
-/-- Definition 2.2's actual matrix, in precisely the displayed order of its four states. -/
+/-- Definition 2.3's actual matrix, in precisely the displayed order of its four states. -/
 theorem adjacency_eq :
     (fun source target : Fin 4 =>
       (adjacencyMatrix vertex gasket (rotation (Real.pi / 3))
