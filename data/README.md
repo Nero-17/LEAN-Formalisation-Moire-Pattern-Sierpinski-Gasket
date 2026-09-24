@@ -5,3 +5,5 @@
 The blue dimensions are numerical spectral-radius evaluations copied at their original precision; this file does not provide the original matrices or certify all 218 values. Red slopes estimate finite-scale count growth, not certified Hausdorff dimensions. The JSON records provenance, arithmetic limitations and source hashes. These numerical data are separate from the Lean proof development.
 
 Read with Python's standard library: `json.load(open("data/dimension-results.json"))`.
+
+The [numerical scripts](../numerics/README.md) regenerate the non-resonant counts, least-squares fits and comparison plot. The original blue-point input is supplied as [mtheta_data.dat](mtheta_data.dat); the original blue matrix generator is not included.

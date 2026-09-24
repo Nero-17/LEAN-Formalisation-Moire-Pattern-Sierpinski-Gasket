@@ -77,7 +77,7 @@ Internal manuscript-review reports are excluded from this repository.
 
 ## Numerical data
 
-The compact [numerical results file](data/dimension-results.json) contains blue resonant-angle data and red finite-depth estimates, with all non-resonant counts and fit windows. See [data documentation](data/README.md) for provenance and limitations. These values are not claimed to be Lean-certified.
+The compact [numerical results file](data/dimension-results.json) contains blue resonant-angle data and red finite-depth estimates, with all non-resonant counts and fit windows. See [data documentation](data/README.md) for provenance and limitations, and [numerical scripts](numerics/README.md) for reproducing the counts and plots. These values are not claimed to be Lean-certified.
 
 ## Build and trust boundary
 
