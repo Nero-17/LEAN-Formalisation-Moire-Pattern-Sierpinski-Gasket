@@ -6,7 +6,8 @@ relative-displacement states, and the adjacency matrix of Definition 2.2.
 It contains 79 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
-(private).
+This public repository contains Lean code, English documentation and verification
+records only. The manuscript and its translations are not distributed here.
 
 ## Section 2 entry points
 
@@ -71,9 +72,7 @@ See [audit/LITERATURE.md](audit/LITERATURE.md) for exact source locations,
 representation conventions and the complete trust boundary. The lower-bound
 conjecture remains a conjecture.
 
-The historical audit files describe manuscript revision `f88d4e4`, including
-false assertions later removed from the English manuscript. They are retained
-as historical records, not as current Section 2 coverage reports.
+Internal manuscript-review reports are excluded from this repository.
 
 ## Build and trust boundary
 

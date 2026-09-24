@@ -60,5 +60,5 @@ The final full rebuild is recorded in `section2-full-build-2026-09-23.txt`.
 `section2-axioms-2026-09-23.txt`. Only the standard axioms `propext`,
 `Classical.choice`, and `Quot.sound` are allowed.
 
-Earlier `STATUS.md`, `REVIEW.md`, `EVIDENCE.md` and `UPLOAD.md` reports refer
-to earlier revisions. They should not be read as the current Section 2 status.
+This report describes the completed Section 2 development. Internal manuscript
+reviews of earlier revisions are not distributed in this repository.
