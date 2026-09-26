@@ -6,8 +6,14 @@ relative-displacement states, and the adjacency matrix of Definition 2.3.
 It contains 79 Lean modules, pinned to Lean and mathlib `v4.32.1`.
 
 Repository: <https://github.com/Nero-17/LEAN-Formalisation-Moire-Pattern-Sierpinski-Gasket>
-This public repository contains Lean code, numerical data, English documentation and verification
+This public repository contains Lean code, numerical data, an animation, English documentation and verification
 records. The manuscript and its translations are not distributed here.
+
+## Rotation animation
+
+[Watch or download the 9-fps animation](media/moire-rotation-9fps.mp4).
+The left panel shows the two depth-6 pre-gaskets in red and blue, with their overlap in black; the right panel shows only the overlap.
+The H.264 MP4 contains 360 frames at one degree per frame and 9 frames per second, giving a 40-second full rotation.
 
 ## Section 2 entry points
 
