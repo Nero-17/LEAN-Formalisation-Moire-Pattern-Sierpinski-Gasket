@@ -1,0 +1,90 @@
+{
+  "scope": "Seven table cases; not a full regeneration of the 218-row dataset. Floating-point results are not certified enclosures.",
+  "results": [
+    {
+      "m": 1,
+      "n": 0,
+      "N": 1,
+      "states": 10,
+      "steps": 0,
+      "dim_lower": 1.584962500721156,
+      "dim_upper": 1.584962500721156,
+      "theta": 0.0
+    },
+    {
+      "m": 1,
+      "n": -1,
+      "N": 3,
+      "states": 4,
+      "steps": 30,
+      "dim_lower": 1.2924812503591045,
+      "dim_upper": 1.2924812503620515,
+      "theta": 60.00000000000001
+    },
+    {
+      "m": 3,
+      "n": 1,
+      "N": 7,
+      "states": 25,
+      "steps": 55,
+      "dim_lower": 1.170220963516712,
+      "dim_upper": 1.1702209635222383,
+      "theta": 38.21321070173819,
+      "dataset_theta": 38.21321,
+      "dataset_dimension": 1.170221,
+      "absolute_error": 3.648052482319031e-08
+    },
+    {
+      "m": 4,
+      "n": 1,
+      "N": 13,
+      "states": 52,
+      "steps": 96,
+      "dim_lower": 1.1981590569350136,
+      "dim_upper": 1.1981590569400986,
+      "theta": 27.79577249602797,
+      "dataset_theta": 27.79577,
+      "dataset_dimension": 1.1981591,
+      "absolute_error": 4.3062444055053106e-08
+    },
+    {
+      "m": 5,
+      "n": 1,
+      "N": 21,
+      "states": 58,
+      "steps": 56,
+      "dim_lower": 1.207329699784332,
+      "dim_upper": 1.2073296997899607,
+      "theta": 21.786789298261812,
+      "dataset_theta": 21.78679,
+      "dataset_dimension": 1.2073297,
+      "absolute_error": 2.128537346379744e-10
+    },
+    {
+      "m": 5,
+      "n": 2,
+      "N": 19,
+      "states": 55,
+      "steps": 107,
+      "dim_lower": 1.1680357685804554,
+      "dim_upper": 1.168035768586278,
+      "theta": 46.82644889274108,
+      "dataset_theta": 46.82645,
+      "dataset_dimension": 1.1680358,
+      "absolute_error": 3.1416633294867324e-08
+    },
+    {
+      "m": 7,
+      "n": 1,
+      "N": 43,
+      "states": 187,
+      "steps": 80,
+      "dim_lower": 1.169412817821268,
+      "dim_upper": 1.1694128178259466,
+      "theta": 15.17817893794989,
+      "dataset_theta": 15.17818,
+      "dataset_dimension": 1.1694128,
+      "absolute_error": 1.7823607478817394e-08
+    }
+  ]
+}

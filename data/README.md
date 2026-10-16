@@ -6,4 +6,6 @@ The blue dimensions are numerical spectral-radius evaluations copied at their or
 
 Read with Python's standard library: `json.load(open("data/dimension-results.json"))`.
 
-The [numerical scripts](../numerics/README.md) regenerate the non-resonant counts, least-squares fits and comparison plot. The original blue-point input is supplied as [mtheta_data.dat](mtheta_data.dat); the original blue matrix generator is not included.
+The [numerical scripts](../numerics/README.md) regenerate the non-resonant counts, least-squares fits and comparison plot. The original blue-point input is supplied as [mtheta_data.dat](mtheta_data.dat); the historical blue matrix generator has not been recovered. An independent
+[resonant matrix reconstruction](../numerics/RESONANT_PROVENANCE.md), with
+seven representative numerical checks, is now included.

@@ -31,7 +31,10 @@ identifies the dimension exactly as log2 of the transition matrix's spectral
 radius; only its decimal evaluation is numerical. The plot displays angular
 variation of these dimensions. Symmetry cases, outside the plotted vertical
 range, are reported separately in the table.
-The original matrix-generation code and exact spectral certificates are not
-included here; these scripts preserve, rather than regenerate, that dataset.
+A recovered independent integer-coordinate matrix construction is now provided
+as `resonant_matrix.py`; see [provenance and usage](RESONANT_PROVENANCE.md).
+Seven representative cases have been checked. The historical generator and
+exact spectral certificates for all 218 blue points remain unavailable; the
+plotting script continues to use the preserved dataset.
 
 Run these commands from the repository root. Install dependencies with `python -m pip install -r numerics/requirements.txt`. The counting script can require several GB of RAM; the plotting script can be run directly using the included counts. No manuscript source or text is included.
